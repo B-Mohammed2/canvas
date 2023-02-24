@@ -5,13 +5,15 @@ window.addEventListener('load', ()=>{
     canvas.width = window.innerWidth;
 
     canvas.height=canvas.height-100;
-    
+
+
 
 
     //variable
     let startX;
     let startY;
     let painting =false;
+    let chosenDraw="";
     function startPosition(e){
         ctx.beginPath();
         startX = e.clientX;
@@ -28,26 +30,44 @@ window.addEventListener('load', ()=>{
         ctx.linewidth = 10;
         ctx.lineCap = "round";
         // clear_canvas();
-        ctx.lineTo(e.clientX, e.clientY);
-        ctx.stroke();
-        drawrect(e)
+        // ctx.lineTo(e.clientX, e.clientY);
+        // ctx.stroke();
+        if(chosenDraw==="rect")
+           drawrect(e)
+        // alert("working")
         
         //ctx.beginPath();
         //ctx.moveTo(e.clintX, e.clientY);
     }
-
-
-
+   
+    function ChooseLine(){
+        
+        // ctx.beginPath();
+        // ctx.moveTo(startX, startY);
+        // ctx.lineTo(clientX, clientY);
+        // ctx.stroke();
+        alert("You have chosen a Line")
+        chosenDraw="line"
+    }
     function drawrect(e) {
         // ctx.beginPath();
         clear_canvas();
         ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         ctx.stroke()
+        chosenDraw="rect"
+
+    function drawrectangle() {
+        alert("You have chosen a rectangle")
+        
+        chosenDraw="rect"
+    }
+    
     }
 
    function clear_canvas() {
     ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
     console.log(window.innerHeight)
+    
    }
     
     
@@ -72,10 +92,21 @@ window.addEventListener('load', ()=>{
     canvas.addEventListener('mousedown',startPosition);
     canvas.addEventListener('mouseup',finishPosition);
     canvas.addEventListener('mousemove',draw);
+    
+    button1=document.getElementById("btn")
+    button1.addEventListener('click',clear_canvas);
+
+    button2=document.getElementById("btn2")
+    button2.addEventListener('click',ChooseLine);
+
+    button3=document.getElementById("btn3")
+    button3.addEventListener('click',drawrectangle);
+   
    
 
 });
-//sizing
+
+    //sizing
 
 window.addEventListener('resize', function(event) {
     canvas.height = window.innerHeight;
