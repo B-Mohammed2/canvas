@@ -16,7 +16,7 @@ window.addEventListener('load', ()=>{
     function startPosition(e){
         ctx.beginPath();
         startX = e.clientX;
-        startY=e.clintY;
+        startY=e.clientY;
         painting = true;
         draw(e);
     }
@@ -28,7 +28,7 @@ window.addEventListener('load', ()=>{
         if (!painting) return;
         ctx.linewidth = 10;
         ctx.lineCap = "round";
-        
+        // clear_canvas();
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
         drawrect(e)
@@ -41,10 +41,17 @@ window.addEventListener('load', ()=>{
 
     function drawrect(e) {
         // ctx.beginPath();
-        console.log("xxxxxxx")
-        ctx.rect(startX, startY, 150, 100);
+        clear_canvas();
+        ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         ctx.stroke()
     }
+
+   function clear_canvas() {
+    ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+
+   }
+    
+    
     // function startPosition(r){
     //     painting = true;
     //     draw(r);
