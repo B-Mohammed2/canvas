@@ -4,9 +4,8 @@ window.addEventListener('load', ()=>{
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
+    canvas.height=canvas.height-100;
     
-
-
 
 
     //variable
@@ -48,7 +47,7 @@ window.addEventListener('load', ()=>{
 
    function clear_canvas() {
     ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
-
+    console.log(window.innerHeight)
    }
     
     
