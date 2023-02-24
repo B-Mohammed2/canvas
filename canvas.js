@@ -55,6 +55,7 @@ window.addEventListener('load', ()=>{
         ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         ctx.stroke()
         chosenDraw="rect"
+    }
 
     function drawrectangle() {
         alert("You have chosen a rectangle")
@@ -62,7 +63,7 @@ window.addEventListener('load', ()=>{
         chosenDraw="rect"
     }
     
-    }
+    
 
    function clear_canvas() {
     ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
