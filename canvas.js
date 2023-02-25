@@ -30,11 +30,12 @@ window.addEventListener('load', ()=>{
         ctx.linewidth = 10;
         ctx.lineCap = "round";
         // clear_canvas();
-        // ctx.lineTo(e.clientX, e.clientY);
-        // ctx.stroke();
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
         if(chosenDraw==="rect")
            drawrect(e)
-        // alert("working")
+        // if(chosenDraw==="line") draw(e)
+        
         
         //ctx.beginPath();
         //ctx.moveTo(e.clintX, e.clientY);
