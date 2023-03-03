@@ -97,8 +97,9 @@ window.addEventListener('load', ()=>{
 
         //sizing text
     function lSize() {
-        alert ('change')
+        alert("change")
     }
+
         
         //changing color
 
@@ -118,7 +119,7 @@ window.addEventListener('load', ()=>{
     canvas.addEventListener('mousedown',startPosition);
     canvas.addEventListener('mouseup',finishPosition);
     canvas.addEventListener('mousemove',draw);
-    canvas.addEventListener('onchange',line_width)
+    // canvas.addEventListener('onchange',line_width)
     
     button1=document.getElementById("btn")
     button1.addEventListener('click',clear_canvas);
@@ -133,7 +134,7 @@ window.addEventListener('load', ()=>{
     button4.addEventListener('click',drawcircle);
 
     lW=document.getElementById("line_width")
-    lW.addEventListener('onchange',lSize);
+    lW.addEventListener('onclick',lSize);
 
     }); 
 
