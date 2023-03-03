@@ -32,13 +32,18 @@ window.addEventListener('load', ()=>{
         // clear_canvas();
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
-        if(chosenDraw==="rect")
-           drawrect(e)
-        // if(chosenDraw==="line") draw(e)
         
+        // if(chosenDraw==="rect")
+        //    drawrect(e)  (chosenDraw==="arc") drawarc(e)
+
+        if (chosenDraw==="rect") 
+           { drawrect(e)}
+         else if (chosenDraw==="arc") 
+           { drawarc(e)}
         
-        //ctx.beginPath();
-        //ctx.moveTo(e.clintX, e.clientY);
+
+           
+       
     }
    
     function ChooseLine(){
@@ -55,7 +60,7 @@ window.addEventListener('load', ()=>{
         clear_canvas();
         ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         ctx.stroke()
-        chosenDraw="rect"
+        // chosenDraw="rect"
     }
 
     function drawrectangle() {
@@ -64,7 +69,17 @@ window.addEventListener('load', ()=>{
         chosenDraw="rect"
     }
     
-    
+    function drawarc(e) {
+        clear_canvas();
+        // ctx.arc(startX ,startY,e.clientX, 0, 2 * Math.PI);
+        ctx.ellipse(startX, startY, e.clientX, e.clientY, Math.PI /e.clientX, 0, 2 * Math.PI);
+        ctx.stroke();
+        
+    }
+    function drawcircle() {
+        alert("you have chosen circle")
+        chosenDraw="arc"
+    }
 
    function clear_canvas() {
     ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
@@ -72,22 +87,6 @@ window.addEventListener('load', ()=>{
     
    }
     
-    
-    // function startPosition(r){
-    //     painting = true;
-    //     draw(r);
-    // }
-    // function finishPosition(){
-    //     painting = false;
-    //     ctx.beginPath();
-    // }
-    // function draw(r) {
-    //     if (!painting) return;
-    //     ctx.linewidth=10;
-    //     ctx.rect(startX,startY,r.clientX,r.clientY);
-    //     ctx.stroke();
-
-    // } 
 
 
     //Eventlistenners
@@ -103,6 +102,9 @@ window.addEventListener('load', ()=>{
 
     button3=document.getElementById("btn3")
     button3.addEventListener('click',drawrectangle);
+
+    button4=document.getElementById("btn4")
+    button4.addEventListener('click',drawcircle);
    
    
 
