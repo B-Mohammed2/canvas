@@ -5,6 +5,7 @@ window.addEventListener('load', ()=>{
     canvas.width = window.innerWidth;
 
     canvas.height=canvas.height-100;
+    // canvas.width = canvas.width-200 ;
 
 
 
@@ -14,6 +15,7 @@ window.addEventListener('load', ()=>{
     let startY;
     let painting =false;
     let chosenDraw="";
+    let linesize=1;
     function startPosition(e){
         ctx.beginPath();
         startX = e.clientX;
@@ -37,12 +39,12 @@ window.addEventListener('load', ()=>{
         //    drawrect(e)  (chosenDraw==="arc") drawarc(e)
 
         if (chosenDraw==="rect") 
-           { drawrect(e)}
-         else if (chosenDraw==="arc") 
-           { drawarc(e)}
-        
-
-           
+           drawrect(e)
+         if (chosenDraw==="arc") 
+          drawarc(e)
+        //   if (chosenDraw==="Sline") 
+        //   drawSline(e)
+    
        
     }
    
@@ -56,7 +58,7 @@ window.addEventListener('load', ()=>{
         chosenDraw="line"
     }
     function drawrect(e) {
-        // ctx.beginPath();
+        ctx.beginPath();
         clear_canvas();
         ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         ctx.stroke()
@@ -70,9 +72,10 @@ window.addEventListener('load', ()=>{
     }
     
     function drawarc(e) {
+        ctx.beginPath();
         clear_canvas();
         // ctx.arc(startX ,startY,e.clientX, 0, 2 * Math.PI);
-        ctx.ellipse(startX, startY, e.clientX, e.clientY, Math.PI /e.clientX, 0, 2 * Math.PI);
+        ctx.ellipse(startX, startY, e.clientX-startX, e.clientY-startY, Math.PI /e.clientY, 0, 2 * Math.PI);
         ctx.stroke();
         
     }
@@ -80,10 +83,32 @@ window.addEventListener('load', ()=>{
         alert("you have chosen circle")
         chosenDraw="arc"
     }
+    // function draw_line(e) {
+    //     ctx.beginPath();
+    //    ctx.moveTo(500,700);
+    //    ctx.lineTo(900,700);
+    //    ctx.stroke();
+    // }
+    // function draw_line() {
+    //     chosenDraw="line" 
+    //     alert ("you have chosen line")
+    // }
+        // speach shape
+
+        //sizing text
+    function lSize() {
+        alert ('change')
+    }
+        
+        //changing color
+
+        // Save button
+
+        //upload file
 
    function clear_canvas() {
     ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
-    console.log(window.innerHeight)
+    // console.log(window.innerHeight)
     
    }
     
@@ -93,6 +118,7 @@ window.addEventListener('load', ()=>{
     canvas.addEventListener('mousedown',startPosition);
     canvas.addEventListener('mouseup',finishPosition);
     canvas.addEventListener('mousemove',draw);
+    canvas.addEventListener('onchange',line_width)
     
     button1=document.getElementById("btn")
     button1.addEventListener('click',clear_canvas);
@@ -105,10 +131,13 @@ window.addEventListener('load', ()=>{
 
     button4=document.getElementById("btn4")
     button4.addEventListener('click',drawcircle);
-   
-   
 
-});
+    lW=document.getElementById("line_width")
+    lW.addEventListener('onchange',lSize);
+
+    }); 
+
+
 
     //sizing
 

@@ -2,28 +2,38 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+   
 
 }
 #canvas {
-border:2px solid black;
+border:10px solid rgba(223, 186, 35, 0.186);
+
 }
-.dropdown {
+/* .dropdown {
     background-color: brown;
     align-items: center;
     position: relative;
-}
+} */
 .tools{
     border: 1px solid black;
+    border-radius: 10px;
     align-items: center;
     padding: 10px;
     margin: 10px;
     
-
 }
 button{
     background-color: white;
     padding: 5px;
     align-items: center;
     border: none;
+
+}
+#line_width {
+font-size: 16px;
+width: 50px;
+border-radius: 5px;
+border-color: rgba(38, 131, 53, 0.505);
+border-width: 1px;
 
 }
