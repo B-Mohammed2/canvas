@@ -16,7 +16,7 @@ window.addEventListener('load', ()=>{
     let painting =false;
     let chosenDraw="";
     // let drawings=[];
-    let dataimage;
+    let dataImage;
     let linesize=1;
     let lineCol= "black";
     function startPosition(e){
@@ -24,13 +24,14 @@ window.addEventListener('load', ()=>{
         startX = e.clientX;
         startY=e.clientY;
         painting = true;
+        redraw();
         draw(e);
+        
     }
     function finishPosition(){
         painting = false;
         ctx.beginPath();
-
-        dataimage= convertCanvasToimage();
+        dataImage= convertCanvasToImage();
     }
     function draw(e){
         if (!painting) return;
@@ -56,7 +57,7 @@ window.addEventListener('load', ()=>{
     }
    
     function ChooseLine(){
-        alert("You have chosen a Line")
+        // alert("You have chosen a Line")
         chosenDraw="line"
     }
     function drawrect(e) {
@@ -68,7 +69,7 @@ window.addEventListener('load', ()=>{
     }
 
     function drawrectangle() {
-        alert("You have chosen a rectangle")
+        // alert("You have chosen a rectangle")
         
         chosenDraw="rect"
     }
@@ -81,7 +82,7 @@ window.addEventListener('load', ()=>{
         
     }
     function drawcircle() {
-        alert("you have chosen circle")
+        // alert("you have chosen circle")
         chosenDraw="arc"
     }
     function drawtriangle(e) {
@@ -113,7 +114,7 @@ window.addEventListener('load', ()=>{
         ctx.stroke();
     }
      function choseSline(){
-        alert("you chose sline")
+        // alert("you chose sline")
         chosenDraw="Sline"
      }       
     // }
@@ -132,11 +133,14 @@ window.addEventListener('load', ()=>{
 
         
     }
-    function convertCanvasToimage(){
+    function convertCanvasToImage(){
         let canvas=document.getElementById("canvas");
-        let image= new image();
-        image.src=canvas.toDataURL();
+        let image= new Image();
+        image.src=canvas.toDataURL("image/png");
         return image;
+    }
+    function redraw(){
+       ctx.drawImage(dataImage,0,0);
     }
 
 
