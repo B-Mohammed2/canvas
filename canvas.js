@@ -16,15 +16,15 @@ window.addEventListener('load', ()=>{
     let painting =false;
     let chosenDraw="";
     // let drawings=[];
-    let dataImage;
+    let dataImage=null;
+    let undoImage=null;
     let linesize=1;
     let lineCol= "black";
     function startPosition(e){
         ctx.beginPath();
         startX = e.clientX;
         startY=e.clientY;
-        painting = true;
-        redraw();
+        painting = true; 
         draw(e);
         
     }
@@ -32,6 +32,7 @@ window.addEventListener('load', ()=>{
         painting = false;
         ctx.beginPath();
         dataImage= convertCanvasToImage();
+        
     }
     function draw(e){
         if (!painting) return;
@@ -62,8 +63,10 @@ window.addEventListener('load', ()=>{
     }
     function drawrect(e) {
         ctx.beginPath();
-        clear_canvas();
         ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
+        clear_canvas();
+        if(dataImage!=null)
+        redraw();
         ctx.stroke()
         // chosenDraw="rect"
     }
@@ -76,28 +79,32 @@ window.addEventListener('load', ()=>{
     
     function drawarc(e) {
         ctx.beginPath();
-        clear_canvas();
         ctx.ellipse(startX, startY, e.clientX-startX, e.clientY-startY, Math.PI /e.clientY, 0, 2 * Math.PI);
-        ctx.stroke();
-        
+        clear_canvas();
+        if(dataImage!=null)
+        redraw();
+        ctx.stroke();  
     }
+   
     function drawcircle() {
         // alert("you have chosen circle")
         chosenDraw="arc"
     }
     function drawtriangle(e) {
         ctx.beginPath();
-        clear_canvas();
+        
        ctx.moveTo(startX, startY);
        ctx.lineTo(e.clientX,e.clientY);
-       ctx.lineTo (e.clientX-startX,e.clientY)
+       ctx.lineTo (e.clientX-startX/2,e.clientY)
        ctx.lineTo(startX,startY)
         // ctx.moveTo(200,60)
         // ctx.lineTo(300,300)
         // ctx.lineTo(300-200,300)
         // ctx.lineTo(200,60)
     //    ctx.closePath()
-       
+         clear_canvas();
+         if(dataImage!=null)
+         redraw();
        ctx.stroke();
        
     }
@@ -108,9 +115,11 @@ window.addEventListener('load', ()=>{
     function drawSline(e) {
      
         ctx.beginPath();
-        clear_canvas();
         ctx.moveTo(startX, startY);
         ctx.lineTo(e.clientX, e.clientY);
+        clear_canvas();
+        if(dataImage!=null)
+        redraw();
         ctx.stroke();
     }
      function choseSline(){
@@ -136,11 +145,17 @@ window.addEventListener('load', ()=>{
     function convertCanvasToImage(){
         let canvas=document.getElementById("canvas");
         let image= new Image();
-        image.src=canvas.toDataURL("image/png");
+        image.src=canvas.toDataURL("img/png");
         return image;
     }
     function redraw(){
        ctx.drawImage(dataImage,0,0);
+    }
+    function goBack(){
+        // let canvas=document.getElementById("canvas");
+        // let image =  Image();
+        // canvasStateStack.push(canvas.toDataURL());
+        alert ("undo")
     }
 
 
@@ -153,6 +168,12 @@ window.addEventListener('load', ()=>{
     // console.log(window.innerHeight)
     
    }
+   function clear_page() {
+    ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+    // console.log(window.innerHeight)
+    dataImage=null;
+    
+   }
     
 
 
@@ -163,7 +184,10 @@ window.addEventListener('load', ()=>{
     // canvas.addEventListener('onchange',line_width)
     
     button1=document.getElementById("btn")
-    button1.addEventListener('click',clear_canvas);
+    button1.addEventListener('click',clear_page);
+
+    undoButton=document.getElementById("undo")
+    undoButton.addEventListener('click',goBack)
 
     button2=document.getElementById("btn2")
     button2.addEventListener('click',ChooseLine);
