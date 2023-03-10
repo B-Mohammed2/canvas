@@ -2,9 +2,16 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-   
+    
 
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
+/* body {
+    overflow: hidden; /* Hide scrollbars }*/
+  
+   
 #canvas {
 border:10px solid rgba(223, 186, 35, 0.186);
 
