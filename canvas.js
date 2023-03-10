@@ -15,7 +15,10 @@ window.addEventListener('load', ()=>{
     let startY;
     let painting =false;
     let chosenDraw="";
+    // let drawings=[];
+    let dataimage;
     let linesize=1;
+    let lineCol= "black";
     function startPosition(e){
         ctx.beginPath();
         startX = e.clientX;
@@ -26,11 +29,14 @@ window.addEventListener('load', ()=>{
     function finishPosition(){
         painting = false;
         ctx.beginPath();
+
+        dataimage= convertCanvasToimage();
     }
     function draw(e){
         if (!painting) return;
-        ctx.linewidth = 10;
+        ctx.lineWidth= linesize;
         ctx.lineCap = "round";
+        ctx.strokeStyle= lineCol;
         // clear_canvas();
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
@@ -115,12 +121,24 @@ window.addEventListener('load', ()=>{
 
         //sizing text
     function lSize() {
+        linesize= document.getElementById("line_width").value
 
-        alert("change")
+        // alert(linesize= document.getElementById("line_width").value)
     }
+     //changing color
+    function lineColor(){
+        // alert (document.getElementById("color-picker").value)
+        lineCol= document.getElementById("color-picker").value
 
         
-        //changing color
+    }
+    function convertCanvasToimage(){
+        let canvas=document.getElementById("canvas");
+        let image= new image();
+        image.src=canvas.toDataURL();
+        return image;
+    }
+
 
         // Save button
 
@@ -156,6 +174,9 @@ window.addEventListener('load', ()=>{
     button5.addEventListener('click',chosetraiangle);
     button6=document.getElementById("btn6")
     button6.addEventListener('click',choseSline);
+
+    lColor=document.getElementById("color-picker")
+    lColor.addEventListener('click',lineColor);
 
     lW=document.getElementById("line_width")
     lW.addEventListener('click',lSize);
