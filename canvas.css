@@ -15,6 +15,8 @@ border:10px solid rgba(223, 186, 35, 0.186);
     position: relative;
 } */
 .tools{
+    display: flex;
+    justify-content: center;
     border: 1px solid black;
     border-radius: 10px;
     align-items: center;
@@ -29,6 +31,7 @@ button{
     border: none;
 
 }
+
 #line_width {
 font-size: 16px;
 width: 50px;

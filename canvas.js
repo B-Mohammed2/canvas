@@ -6,8 +6,8 @@ window.addEventListener('load', ()=>{
 
     canvas.height=canvas.height-100;
     // canvas.width = canvas.width-200 ;
-
-
+   
+    
 
 
     //variable
@@ -34,9 +34,6 @@ window.addEventListener('load', ()=>{
         // clear_canvas();
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
-        
-        // if(chosenDraw==="rect")
-        //    drawrect(e)  (chosenDraw==="arc") drawarc(e)
 
         if (chosenDraw==="rect") 
            drawrect(e)
@@ -44,16 +41,15 @@ window.addEventListener('load', ()=>{
           drawarc(e)
         //   if (chosenDraw==="Sline") 
         //   drawSline(e)
+        if (chosenDraw==="triangle") 
+         drawtriangle(e)
+         if (chosenDraw==="Sline")
+         drawSline(e)
     
        
     }
    
     function ChooseLine(){
-        
-        // ctx.beginPath();
-        // ctx.moveTo(startX, startY);
-        // ctx.lineTo(clientX, clientY);
-        // ctx.stroke();
         alert("You have chosen a Line")
         chosenDraw="line"
     }
@@ -74,7 +70,6 @@ window.addEventListener('load', ()=>{
     function drawarc(e) {
         ctx.beginPath();
         clear_canvas();
-        // ctx.arc(startX ,startY,e.clientX, 0, 2 * Math.PI);
         ctx.ellipse(startX, startY, e.clientX-startX, e.clientY-startY, Math.PI /e.clientY, 0, 2 * Math.PI);
         ctx.stroke();
         
@@ -83,20 +78,44 @@ window.addEventListener('load', ()=>{
         alert("you have chosen circle")
         chosenDraw="arc"
     }
-    // function draw_line(e) {
-    //     ctx.beginPath();
-    //    ctx.moveTo(500,700);
-    //    ctx.lineTo(900,700);
-    //    ctx.stroke();
-    // }
-    // function draw_line() {
-    //     chosenDraw="line" 
-    //     alert ("you have chosen line")
+    function drawtriangle(e) {
+        ctx.beginPath();
+        clear_canvas();
+       ctx.moveTo(startX, startY);
+       ctx.lineTo(e.clientX,e.clientY);
+       ctx.lineTo (e.clientX-startX,e.clientY)
+       ctx.lineTo(startX,startY)
+        // ctx.moveTo(200,60)
+        // ctx.lineTo(300,300)
+        // ctx.lineTo(300-200,300)
+        // ctx.lineTo(200,60)
+    //    ctx.closePath()
+       
+       ctx.stroke();
+       
+    }
+    function chosetraiangle (){
+        chosenDraw="triangle"
+        // alert ("traingle")
+    }
+    function drawSline(e) {
+     
+        ctx.beginPath();
+        clear_canvas();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
+    }
+     function choseSline(){
+        alert("you chose sline")
+        chosenDraw="Sline"
+     }       
     // }
         // speach shape
 
         //sizing text
     function lSize() {
+
         alert("change")
     }
 
@@ -133,8 +152,13 @@ window.addEventListener('load', ()=>{
     button4=document.getElementById("btn4")
     button4.addEventListener('click',drawcircle);
 
+    button5=document.getElementById("btn5")
+    button5.addEventListener('click',chosetraiangle);
+    button6=document.getElementById("btn6")
+    button6.addEventListener('click',choseSline);
+
     lW=document.getElementById("line_width")
-    lW.addEventListener('onclick',lSize);
+    lW.addEventListener('click',lSize);
 
     }); 
 
