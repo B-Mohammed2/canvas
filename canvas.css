@@ -31,7 +31,7 @@ border:10px solid rgba(223, 186, 35, 0.186);
     margin: 10px;
     
 }
-button{
+button, input{
     background-color: white;
     padding: 5px;
     align-items: center;

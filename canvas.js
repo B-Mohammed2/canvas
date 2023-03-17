@@ -16,10 +16,15 @@ window.addEventListener('load', ()=>{
     let painting =false;
     let chosenDraw="";
     // let drawings=[];
+    // store the whole pic of the canvas
     let dataImage=null;
-    let undoImage=null;
+    // let undoImage=null;
     let linesize=1;
     let lineCol= "black";
+    let imagePointer=-1;
+    let undoImage=[]; // Array store a serise of canvas image take it to varios point 
+    
+
     function startPosition(e){
         ctx.beginPath();
         startX = e.clientX;
@@ -32,7 +37,9 @@ window.addEventListener('load', ()=>{
         painting = false;
         ctx.beginPath();
         dataImage= convertCanvasToImage();
-        
+        imagePointer++;
+        undoImage[imagePointer]=dataImage;
+        // redoImage[imagePointer]=dataImage;
     }
     function draw(e){
         if (!painting) return;
@@ -53,8 +60,9 @@ window.addEventListener('load', ()=>{
          drawtriangle(e)
          if (chosenDraw==="Sline")
          drawSline(e)
-    
        
+         
+
     }
    
     function ChooseLine(){
@@ -139,8 +147,7 @@ window.addEventListener('load', ()=>{
     function lineColor(){
         // alert (document.getElementById("color-picker").value)
         lineCol= document.getElementById("color-picker").value
-
-        
+  
     }
     function convertCanvasToImage(){
         let canvas=document.getElementById("canvas");
@@ -151,14 +158,49 @@ window.addEventListener('load', ()=>{
     function redraw(){
        ctx.drawImage(dataImage,0,0);
     }
+        // undo button
     function goBack(){
-        // let canvas=document.getElementById("canvas");
-        // let image =  Image();
-        // canvasStateStack.push(canvas.toDataURL());
-        alert ("undo")
+      //look to the previous load img of the canvas
+    //   imagePointer--;
+    //   dataImage=undoImage[imagePointer];
+    //   clear_canvas();
+    //   redraw()
+      if(imagePointer!=0){
+         imagePointer--;
+        dataImage=undoImage[imagePointer];
+        clear_canvas();
+        redraw()}
+        
     }
 
+    
+    function goNext() {
+       
+      if(imagePointer<undoImage.length-1){
+        imagePointer++;
+        dataImage=undoImage[imagePointer];
+        clear_canvas();
+        redraw()
+        console.log(imagePointer)
+        console.log(undoImage.length)}
+    }
+      
+      
+    
 
+      
+     
+    
+    // function eraser(){
+    //     // ctx.clearArc(startX, startY, e.clientX+2, 0, 2 * Math.PI);
+    //     chosenDraw="Erase"
+    //     alert("eraser")
+    //    }
+    // function Erase(e){
+    //     ctx.clearRect(startX,startY,e.clientX,e.clientY);
+    // }
+        // code to memorise every step in the canvas
+    
         // Save button
 
         //upload file
@@ -174,6 +216,7 @@ window.addEventListener('load', ()=>{
     dataImage=null;
     
    }
+  
     
 
 
@@ -186,8 +229,14 @@ window.addEventListener('load', ()=>{
     button1=document.getElementById("btn")
     button1.addEventListener('click',clear_page);
 
+    // erasebtn=document.getElementById("Eraser")
+    // erasebtn.addEventListener('click',eraser)
+
     undoButton=document.getElementById("undo")
-    undoButton.addEventListener('click',goBack)
+    undoButton.addEventListener('click',goBack);
+
+    redoBtn=document.getElementById("Redo")
+    redoBtn.addEventListener('click',goNext);
 
     button2=document.getElementById("btn2")
     button2.addEventListener('click',ChooseLine);
