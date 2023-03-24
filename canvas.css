@@ -36,6 +36,7 @@ button, input{
     padding: 5px;
     align-items: center;
     border: none;
+    text-decoration: none;
 
 }
 

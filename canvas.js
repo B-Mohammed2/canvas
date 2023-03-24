@@ -46,6 +46,7 @@ window.addEventListener('load', ()=>{
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol;
+        
         // clear_canvas();
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
@@ -60,6 +61,9 @@ window.addEventListener('load', ()=>{
          drawtriangle(e)
          if (chosenDraw==="Sline")
          drawSline(e)
+
+        if (chosenDraw==="whiteline")
+         drawWhiteLine(e)
        
          
 
@@ -103,13 +107,8 @@ window.addEventListener('load', ()=>{
         
        ctx.moveTo(startX, startY);
        ctx.lineTo(e.clientX,e.clientY);
-       ctx.lineTo (e.clientX-startX/2,e.clientY)
-       ctx.lineTo(startX,startY)
-        // ctx.moveTo(200,60)
-        // ctx.lineTo(300,300)
-        // ctx.lineTo(300-200,300)
-        // ctx.lineTo(200,60)
-    //    ctx.closePath()
+       ctx.lineTo (e.clientX-startX/2,e.clientY);
+       ctx.lineTo(startX,startY);
          clear_canvas();
          if(dataImage!=null)
          redraw();
@@ -149,12 +148,14 @@ window.addEventListener('load', ()=>{
         lineCol= document.getElementById("color-picker").value
   
     }
+    // code to memorise every step in the canvas
     function convertCanvasToImage(){
         let canvas=document.getElementById("canvas");
         let image= new Image();
         image.src=canvas.toDataURL("img/png");
         return image;
     }
+    
     function redraw(){
        ctx.drawImage(dataImage,0,0);
     }
@@ -180,28 +181,24 @@ window.addEventListener('load', ()=>{
         imagePointer++;
         dataImage=undoImage[imagePointer];
         clear_canvas();
-        redraw()
+        redraw();
         console.log(imagePointer)
         console.log(undoImage.length)}
     }
-      
-      
     
-
-      
-     
-    
-    // function eraser(){
-    //     // ctx.clearArc(startX, startY, e.clientX+2, 0, 2 * Math.PI);
-    //     chosenDraw="Erase"
-    //     alert("eraser")
-    //    }
-    // function Erase(e){
-    //     ctx.clearRect(startX,startY,e.clientX,e.clientY);
-    // }
-        // code to memorise every step in the canvas
-    
-        // Save button
+    function eraser(){
+        
+        chosenDraw="whiteline"
+        alert("eraser")
+       }
+    function drawWhiteLine(e){
+        ctx.globalCompositeOperation="destination-out";
+        ctx.beginPath();
+        ctx.lineTo(e.clientX, e.clientY);
+        // clear_canvas();
+        // redraw();
+        ctx.stroke();
+    }
 
         //upload file
 
@@ -224,13 +221,23 @@ window.addEventListener('load', ()=>{
     canvas.addEventListener('mousedown',startPosition);
     canvas.addEventListener('mouseup',finishPosition);
     canvas.addEventListener('mousemove',draw);
+    canvas.addEventListener('mouseout',finishPosition);
+    
+
+   // event listenners for toch screen
+    // canvas.addEventListener('touchstart',startPosition)
+    // canvas.addEventListener('touchmove',draw)
+    // canvas.addEventListener('touchend',finishPosition)
+    // canvas.addEventListener('touchout',finishPosition)
+    
+
     // canvas.addEventListener('onchange',line_width)
     
     button1=document.getElementById("btn")
     button1.addEventListener('click',clear_page);
 
-    // erasebtn=document.getElementById("Eraser")
-    // erasebtn.addEventListener('click',eraser)
+    erasebtn=document.getElementById("Eraser")
+    erasebtn.addEventListener('click',eraser)
 
     undoButton=document.getElementById("undo")
     undoButton.addEventListener('click',goBack);
@@ -259,8 +266,13 @@ window.addEventListener('load', ()=>{
     lW.addEventListener('click',lSize);
 
     }); 
-
-
+    // Save button
+    saveButton = document.getElementById("save");
+    save.onclick = function(e) {
+        dataUrl = canvas.toDataURL('image/png');
+        save.href = dataUrl;
+    };
+    
 
     //sizing
 
