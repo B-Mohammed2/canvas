@@ -15,10 +15,8 @@ window.addEventListener('load', ()=>{
     let startY;
     let painting =false;
     let chosenDraw="";
-    // let drawings=[];
     // store the whole pic of the canvas
     let dataImage=null;
-    // let undoImage=null;
     let linesize=1;
     let lineCol= "black";
     let imagePointer=-1;
@@ -31,6 +29,7 @@ window.addEventListener('load', ()=>{
         startY=e.clientY;
         painting = true; 
         draw(e);
+        showVariables()
         
     }
     function finishPosition(){
@@ -39,10 +38,10 @@ window.addEventListener('load', ()=>{
         dataImage= convertCanvasToImage();
         imagePointer++;
         undoImage[imagePointer]=dataImage;
-        // redoImage[imagePointer]=dataImage;
     }
     function draw(e){
         if (!painting) return;
+        
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol;
@@ -75,6 +74,7 @@ window.addEventListener('load', ()=>{
     }
     function drawrect(e) {
         ctx.beginPath();
+        ctx.globalCompositeOperation="source-over";
         ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         clear_canvas();
         if(dataImage!=null)
@@ -85,13 +85,15 @@ window.addEventListener('load', ()=>{
 
     function drawrectangle() {
         // alert("You have chosen a rectangle")
-        
         chosenDraw="rect"
+        
     }
     
     function drawarc(e) {
         ctx.beginPath();
-        ctx.ellipse(startX, startY, e.clientX-startX, e.clientY-startY, Math.PI /e.clientY, 0, 2 * Math.PI);
+        ctx.globalCompositeOperation="source-over";
+        // ctx.ellipse(startX, startY, e.clientX-startX, e.clientY-startY, Math.PI /e.clientY, 0, 2 * Math.PI);
+        ctx.ellipse(startX, startY, Math.abs(e.clientX-startX), Math.abs(e.clientY-startY), Math.PI /e.clientY, 0, 2 * Math.PI);
         clear_canvas();
         if(dataImage!=null)
         redraw();
@@ -104,11 +106,11 @@ window.addEventListener('load', ()=>{
     }
     function drawtriangle(e) {
         ctx.beginPath();
-        
-       ctx.moveTo(startX, startY);
-       ctx.lineTo(e.clientX,e.clientY);
-       ctx.lineTo (e.clientX-startX/2,e.clientY);
-       ctx.lineTo(startX,startY);
+        ctx.globalCompositeOperation="source-over";
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(e.clientX,e.clientY);
+        ctx.lineTo (e.clientX-startX/2,e.clientY);
+        ctx.lineTo(startX,startY);
          clear_canvas();
          if(dataImage!=null)
          redraw();
@@ -122,6 +124,7 @@ window.addEventListener('load', ()=>{
     function drawSline(e) {
      
         ctx.beginPath();
+        ctx.globalCompositeOperation="source-over";
         ctx.moveTo(startX, startY);
         ctx.lineTo(e.clientX, e.clientY);
         clear_canvas();
@@ -146,6 +149,7 @@ window.addEventListener('load', ()=>{
     function lineColor(){
         // alert (document.getElementById("color-picker").value)
         lineCol= document.getElementById("color-picker").value
+        console.log(lineCol)
   
     }
     // code to memorise every step in the canvas
@@ -213,6 +217,9 @@ window.addEventListener('load', ()=>{
     dataImage=null;
     
    }
+   function showVariables(){
+    console.log("dataImage is"+dataImage);
+   }
   
     
 
@@ -259,11 +266,13 @@ window.addEventListener('load', ()=>{
     button6=document.getElementById("btn6")
     button6.addEventListener('click',choseSline);
 
+    // lColor=document.getElementById("color-picker")
+    // lColor.addEventListener('click',lineColor);
     lColor=document.getElementById("color-picker")
-    lColor.addEventListener('click',lineColor);
+    lColor.addEventListener('input',lineColor);
 
     lW=document.getElementById("line_width")
-    lW.addEventListener('click',lSize);
+    lW.addEventListener('input',lSize);
 
     }); 
     // Save button
