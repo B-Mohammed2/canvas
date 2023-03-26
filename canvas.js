@@ -13,6 +13,9 @@ window.addEventListener('load', ()=>{
     //variable
     let startX;
     let startY;
+    // let touch = e.touches[0];
+    // let x = touch.pageX;
+    // let y = touch.pageY;
     let painting =false;
     let chosenDraw="";
     // store the whole pic of the canvas
@@ -29,8 +32,8 @@ window.addEventListener('load', ()=>{
         startY=e.clientY;
         painting = true; 
         draw(e);
-        showVariables()
-        // alert("start touch")
+        // showVariables()
+        
         
     }
     function finishPosition(){
@@ -43,7 +46,6 @@ window.addEventListener('load', ()=>{
     }
     function draw(e){
         if (!painting) return;
-        
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol;
@@ -65,11 +67,15 @@ window.addEventListener('load', ()=>{
 
         if (chosenDraw==="whiteline")
          drawWhiteLine(e)
-       
-         
-
+        if (chosenDraw==="line")
+        doodle(e)
     }
-   
+    function doodle(e){
+        ctx.beginPath();
+        ctx.globalCompositeOperation="source-over";
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
+    }
     function ChooseLine(){
         // alert("You have chosen a Line")
         chosenDraw="line"
@@ -124,7 +130,7 @@ window.addEventListener('load', ()=>{
         // alert ("traingle")
     }
     function drawSline(e) {
-     
+        
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
         ctx.moveTo(startX, startY);
@@ -180,7 +186,7 @@ window.addEventListener('load', ()=>{
         
     }
 
-    
+
     function goNext() {
        
       if(imagePointer<undoImage.length-1){
@@ -195,14 +201,11 @@ window.addEventListener('load', ()=>{
     function eraser(){
         
         chosenDraw="whiteline"
-        alert("eraser")
        }
     function drawWhiteLine(e){
         ctx.globalCompositeOperation="destination-out";
         ctx.beginPath();
         ctx.lineTo(e.clientX, e.clientY);
-        // clear_canvas();
-        // redraw();
         ctx.stroke();
     }
 
@@ -222,10 +225,92 @@ window.addEventListener('load', ()=>{
    function showVariables(){
     console.log("dataImage is"+dataImage);
    }
-    function tochdraw(){
-    alert("draw touch")
-    }
+   
+
+    // function tochdraw(){
+    // console.log(Touch.clientX)
+
+
+    // }
+    // const src= document.getElementById("canvas");
+    // let cX;
+    // let cY;
+
+    // src.addEventListener(
+    // "touchmove",
+    // (e) => {
+    //     // Cache the client X/Y coordinates
+    //     cX = e.touches[0].clientX;
+    //     cY = e.touches[0].clientY;
+    //     console.log(cX);
+    //     console.log(cY);
+    //     if (!painting) return;
+    //     ctx.lineWidth= linesize;
+    //     ctx.lineCap = "round";
+    //     ctx.strokeStyle= lineCol;
+    //     // clear_canvas();
+    //     ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+    //     ctx.stroke();
+
+
+    // },
+    // false
+    // );
     
+
+    // }
+     
+//     // canvas.addEventListener(
+//     //     "touchmove",
+//     //     (e) => {
+//     //         if (!painting) return;
+        
+//     //         ctx.lineWidth= linesize;
+//     //         ctx.lineCap = "round";
+//     //         ctx.strokeStyle= lineCol;
+            
+//     //         // clear_canvas();
+//     //         ctx.lineTo(e.clientX, e.clientY);
+//     //         ctx.stroke();
+//     //         console.log("drawing")
+    
+//     //         if (chosenDraw==="rect") 
+//     //            drawrect(e)
+//     //          if (chosenDraw==="arc") 
+//     //           drawarc(e)
+//     //         if (chosenDraw==="triangle") 
+//     //          drawtriangle(e)
+//     //          if (chosenDraw==="Sline")
+//     //          drawSline(e)
+    
+//     //         if (chosenDraw==="whiteline")
+//     //          drawWhiteLine(e)
+
+            
+//     //     },
+//     //     false
+//     //     );
+
+
+//     canvas.addEventListener(
+//     "touchend",
+//     (e) => {
+//         let deltaX;
+//         let deltaY;
+
+//         // Compute the change in X and Y coordinates.
+//         // The first touch point in the changedTouches
+//         // list is the touch point that was just removed from the surface.
+//         deltaX = e.changedTouches[0].clientX - cX;
+//         deltaY = e.changedTouches[0].clientY - cY;
+//         console.log("cx"+cX);
+//         console.log("cy"+cY);
+
+//         // Process the data…
+//     },
+//     false
+//     );
+        
       
 
   
@@ -283,8 +368,6 @@ window.addEventListener('load', ()=>{
     button6=document.getElementById("btn6")
     button6.addEventListener('click',choseSline);
 
-    // lColor=document.getElementById("color-picker")
-    // lColor.addEventListener('click',lineColor);
     lColor=document.getElementById("color-picker")
     lColor.addEventListener('input',lineColor);
 
