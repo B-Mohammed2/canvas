@@ -24,7 +24,10 @@ window.addEventListener('load', ()=>{
     let lineCol= "black";
     let imagePointer=-1;
     let undoImage=[]; // Array store a serise of canvas image take it to varios point 
-    
+    // let StartTouch=function startPosition(e){
+    //     preventDefault()
+    //     beginPath
+    // }
 
     function startPosition(e){
         ctx.beginPath();
@@ -174,10 +177,6 @@ window.addEventListener('load', ()=>{
         // undo button
     function goBack(){
       //look to the previous load img of the canvas
-    //   imagePointer--;
-    //   dataImage=undoImage[imagePointer];
-    //   clear_canvas();
-    //   redraw()
       if(imagePointer!=0){
          imagePointer--;
         dataImage=undoImage[imagePointer];
@@ -222,9 +221,10 @@ window.addEventListener('load', ()=>{
     dataImage=null;
     
    }
-   function showVariables(){
-    console.log("dataImage is"+dataImage);
-   }
+
+//    function showVariables(){
+//     console.log("dataImage is"+dataImage);
+//    }
    
 
     // function tochdraw(){
@@ -232,84 +232,59 @@ window.addEventListener('load', ()=>{
 
 
     // }
-    // const src= document.getElementById("canvas");
-    // let cX;
-    // let cY;
+    const src= document.getElementById("canvas");
+    let cX;
+    let cY;
 
-    // src.addEventListener(
-    // "touchmove",
-    // (e) => {
-    //     // Cache the client X/Y coordinates
-    //     cX = e.touches[0].clientX;
-    //     cY = e.touches[0].clientY;
-    //     console.log(cX);
-    //     console.log(cY);
-    //     if (!painting) return;
-    //     ctx.lineWidth= linesize;
-    //     ctx.lineCap = "round";
-    //     ctx.strokeStyle= lineCol;
-    //     // clear_canvas();
-    //     ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
-    //     ctx.stroke();
+    src.addEventListener(
+        "touchstart",
+        (e) => {
+            e.preventDefault();
+            ctx.beginPath();
+        },
+        false
+        );
 
-
-    // },
-    // false
-    // );
-    
-
-    // }
-     
-//     // canvas.addEventListener(
-//     //     "touchmove",
-//     //     (e) => {
-//     //         if (!painting) return;
+    src.addEventListener(
+    "touchmove",
+    (e) => {
+        // Catche the client X/Y coordinates
+        cX = e.touches[0].clientX;
+        cY = e.touches[0].clientY;
+        e.preventDefault();
         
-//     //         ctx.lineWidth= linesize;
-//     //         ctx.lineCap = "round";
-//     //         ctx.strokeStyle= lineCol;
-            
-//     //         // clear_canvas();
-//     //         ctx.lineTo(e.clientX, e.clientY);
-//     //         ctx.stroke();
-//     //         console.log("drawing")
+        ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+        ctx.stroke();
+
+
+    },
+    false
+    );
     
-//     //         if (chosenDraw==="rect") 
-//     //            drawrect(e)
-//     //          if (chosenDraw==="arc") 
-//     //           drawarc(e)
-//     //         if (chosenDraw==="triangle") 
-//     //          drawtriangle(e)
-//     //          if (chosenDraw==="Sline")
-//     //          drawSline(e)
-    
-//     //         if (chosenDraw==="whiteline")
-//     //          drawWhiteLine(e)
+    canvas.addEventListener(
+    "touchend",
+    (e) => {
+        let deltaX;
+        let deltaY;
+        painting = false;
+        ctx.beginPath();
 
-            
-//     //     },
-//     //     false
-//     //     );
+        // Compute the change in X and Y coordinates.
+        // The first touch point in the changedTouches
+        // list is the touch point that was just removed from the surface.
+        deltaX = e.changedTouches[0].clientX - cX;
+        deltaY = e.changedTouches[0].clientY - cY;
+        console.log("cx"+cX);
+        console.log("cy"+cY);
 
+        dataImage= convertCanvasToImage();
+        imagePointer++;
+        undoImage[imagePointer]=dataImage;
 
-//     canvas.addEventListener(
-//     "touchend",
-//     (e) => {
-//         let deltaX;
-//         let deltaY;
-
-//         // Compute the change in X and Y coordinates.
-//         // The first touch point in the changedTouches
-//         // list is the touch point that was just removed from the surface.
-//         deltaX = e.changedTouches[0].clientX - cX;
-//         deltaY = e.changedTouches[0].clientY - cY;
-//         console.log("cx"+cX);
-//         console.log("cy"+cY);
-
-//         // Process the data…
-//     },
-//     false
-//     );
+        // Process the data…
+    },
+    false
+    );
         
       
 
@@ -330,10 +305,10 @@ window.addEventListener('load', ()=>{
     // canvas.addEventListener('touchend',finishPosition,false)
     // canvas.addEventListener('touchout',finishPosition,false)
 
-    canvas.addEventListener('touchstart',startPosition)
-    canvas.addEventListener('touchmove',draw)
-    canvas.addEventListener('touchend',finishPosition)
-    canvas.addEventListener('touchout',finishPosition)
+    // canvas.addEventListener('touchstart',startPosition)
+    // canvas.addEventListener('touchmove',draw)
+    // canvas.addEventListener('touchend',finishPosition)
+    // canvas.addEventListener('touchout',finishPosition)
 
     // canvas.addEventListener("touchstart", touch2Mouse, true);
     // canvas.addEventListener("touchmove", touch2Mouse, true);

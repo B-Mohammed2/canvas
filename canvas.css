@@ -35,7 +35,7 @@ button, input{
     background-color: white;
     padding: 5px;
     align-items: center;
-    border: none;
+    border:none;
     text-decoration: none;
 
 }
@@ -43,6 +43,7 @@ button, input{
 #line_width {
 font-size: 16px;
 width: 50px;
+border:2px solid;
 border-radius: 5px;
 border-color: rgba(38, 131, 53, 0.505);
 border-width: 1px;
