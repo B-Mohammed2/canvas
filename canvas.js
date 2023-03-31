@@ -260,6 +260,11 @@ window.addEventListener('load', ()=>{
         (e) => {
             // e.preventDefault();
             ctx.beginPath();
+
+        cX = e.touches[0].clientX;
+        cY = e.touches[0].clientY;
+        painting = true; 
+        // draw(e);
         },
         false
         );
@@ -286,7 +291,7 @@ window.addEventListener('load', ()=>{
         drawTSline(e)
         // console.log("draw")
         // alert("tuch draw")
-        console.log("inside drawTSline chosenDraw="+chosenDraw);
+        // console.log("start"+cX);
 
 
     },
@@ -350,12 +355,17 @@ window.addEventListener('load', ()=>{
         // e.preventDefault();
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
-        ctx.moveTo(cX, cY);
-        ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+        // ctx.moveTo(e.touches[0].clientX, e.touches[0].clientY);
+        ctx.moveTo(cX,cY);
+        ctx.lineTo(e.changedTouches[0].clientX - cX,e.changedTouches[0].clientY - cY);
+        // ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         clear_canvas();
         if(dataImage!=null)
         redraw();
         ctx.stroke();
+        console.log("cx"+cX);
+        console.log("cy"+cY);
+
         
         
     }
