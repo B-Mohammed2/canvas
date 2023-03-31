@@ -288,6 +288,11 @@ window.addEventListener('load', ()=>{
         drawTrect(e)
         if (chosenDraw==="TSline")
         drawTSline(e)
+        if (chosenDraw==="Tarc") 
+        // console.log("chosen drow"+chosenDraw)
+        drawTocharc(e)
+
+
         
         // console.log("draw")
         // alert("tuch draw")
@@ -349,21 +354,21 @@ window.addEventListener('load', ()=>{
 
     function drawtrectangle() {
         chosenDraw="Trect"
-        alert("draw rect")
+        // alert("draw rect")
     }
-    function drawTarc(e) {
+    function drawTocharc(e) {
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
-        // ctx.ellipse(startX, startY, e.clientX-startX, e.clientY-startY, Math.PI /e.clientY, 0, 2 * Math.PI);
         ctx.ellipse(cX, cY, Math.abs(e.changedTouches[0].clientX - cX), Math.abs(e.changedTouches[0].clientY - cY ), Math.PI /e.changedTouches[0].clientY, 0, 2 * Math.PI);
         clear_canvas();
         if(dataImage!=null)
         redraw();
-        ctx.stroke();  
+        ctx.stroke(); 
+        console.log("cx"+cX);
     }
    
     function drawTcircle() {
-        // alert("you have chosen circle")
+        alert("you have chosen circle")
         chosenDraw="Tarc"
     }
     function drawTSline(e) {
@@ -437,6 +442,8 @@ window.addEventListener('load', ()=>{
 
     button4=document.getElementById("btn4")
     button4.addEventListener('click',drawcircle);
+    button4=document.getElementById("btn4")
+    button4.addEventListener('touchstart',drawTcircle);
 
     button5=document.getElementById("btn5")
     button5.addEventListener('click',chosetraiangle);
