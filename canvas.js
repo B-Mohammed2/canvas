@@ -358,10 +358,10 @@ window.addEventListener('load', ()=>{
         ctx.stroke();
         console.log("cx"+cX);
     }
-    //  function choseTuchSline(){
-    //     // alert("you chose sline")
-    //     chosenDraw="TSline"
-    //  }       
+     function choseTuchSline(){
+        // alert("you chose sline")
+        chosenDraw="TSline"
+     }       
         
       
 
@@ -423,8 +423,9 @@ window.addEventListener('load', ()=>{
 
     button6=document.getElementById("btn6")
     button6.addEventListener('click',choseSline);
-    // button6=document.getElementById("btn6")
-    // button6.addEventListener('click',choseTuchSline);
+    buttonLine=document.getElementById("btn6")
+    buttonLine.addEventListener('click',choseTuchSline);
+    
     button7=document.getElementById("addText")
     button7.addEventListener('click',AddText)
 

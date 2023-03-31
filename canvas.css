@@ -5,12 +5,15 @@
     
 
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-  }
-/* body {
-    overflow: hidden; /* Hide scrollbars }*/
+ } */
   
+body{
+    overflow-y: hidden; /* Hide vertical scrollbars }*/
+    overflow-x: hidden; /* Hide horizontal scrollbars }*/
+
+}
    
 #canvas {
 border:10px solid rgba(223, 186, 35, 0.186);
