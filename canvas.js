@@ -170,6 +170,7 @@ window.addEventListener('load', ()=>{
         // console.log(lineCol)
   
     }
+        // getting the chosen image from device and puting it on the canvas.
     var snap = document.getElementById("snap");
         snap.onchange=function(e){ 
           var url = URL.createObjectURL(e.target.files[0]);
@@ -273,7 +274,7 @@ window.addEventListener('load', ()=>{
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol
-        e.preventDefault();
+        // e.preventDefault();
         
         ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         ctx.stroke();
@@ -285,6 +286,7 @@ window.addEventListener('load', ()=>{
         drawTSline(e)
         // console.log("draw")
         // alert("tuch draw")
+        console.log("inside drawTSline chosenDraw="+chosenDraw);
 
 
     },
@@ -337,9 +339,7 @@ window.addEventListener('load', ()=>{
     //     ctx.stroke()
     //     alert("draw rect")
     //     //  console.log("cx"+cX);
-    //     // console.log("cy"+cY);
-        
-        
+    //     // console.log("cy"+cY); 
     // }
 
     // function drawtrectangle() {
@@ -356,19 +356,15 @@ window.addEventListener('load', ()=>{
         if(dataImage!=null)
         redraw();
         ctx.stroke();
-        console.log("cx"+cX);
+        
+        
     }
      function choseTuchSline(){
         // alert("you chose sline")
         chosenDraw="TSline"
      }       
         
-      
-
-  
     
-
-
     //Eventlistenners
     canvas.addEventListener('mousedown',startPosition);
     canvas.addEventListener('mouseup',finishPosition);
@@ -427,7 +423,7 @@ window.addEventListener('load', ()=>{
     buttonLine.addEventListener('click',choseTuchSline);
     
     button7=document.getElementById("addText")
-    button7.addEventListener('click',AddText)
+    button7.addEventListener('click',AddText);
 
     lColor=document.getElementById("color-picker")
     lColor.addEventListener('input',lineColor);
