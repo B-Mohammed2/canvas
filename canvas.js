@@ -90,11 +90,12 @@ window.addEventListener('load', ()=>{
         if(dataImage!=null)
         redraw();
         ctx.stroke()
-        
+        // console.log("drawing rect"+chosenDraw)
     }
 
-    function drawrectangle() {
+    function choserectangle() {
         // alert("You have chosen a rectangle")
+        // e.preventDefault();
         chosenDraw="rect"
         
     }
@@ -255,7 +256,7 @@ window.addEventListener('load', ()=>{
     //     "touchstart",
     //     (e) => 
     function startTouch(e){
-            // e.preventDefault();
+            e.preventDefault();
             ctx.beginPath();
 
         cX = e.touches[0].clientX;
@@ -275,6 +276,8 @@ window.addEventListener('load', ()=>{
         // Catche the client X/Y coordinates
         // cX = e.touches[0].clientX;
         // cY = e.touches[0].clientY;
+        e.preventDefault();
+        e.stopImmediatePropagation();
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol
@@ -284,16 +287,28 @@ window.addEventListener('load', ()=>{
         ctx.stroke();
         if (chosenDraw==="doodle")
         doodleT(e)
-        if (chosenDraw==="Trect")
-        drawTrect(e)
+        // if(chosenDraw=="Tochrect")
+      
+        //  alert("draw chose"+chosenDraw)
+        // console.log("chosen drow"+chosenDraw)
+        
+
+
         if (chosenDraw==="TSline")
         drawTSline(e)
+
         if (chosenDraw==="Tarc") 
-        // console.log("chosen drow"+chosenDraw)
         drawTocharc(e)
 
+        if (chosenDraw==="TochTriangle")
+        drawTochTriangle(e)
+        if (chosenDraw==="Tochrect")
+        drawTochrect(e)
 
+        //  console.log("chosen "+chosenDraw)
         
+
+
         // console.log("draw")
         // alert("tuch draw")
         // console.log("start"+cX);
@@ -338,23 +353,26 @@ window.addEventListener('load', ()=>{
         chosenDraw="doodle"
     }
 
-    function drawTrect(e) {
+    function drawTochrect(e) {
         // e.preventDefault();
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
-        ctx.rect(cX, cY, e.changedTouches[0].clientX - cX ,e.changedTouches[0].clientY - cY )
+        ctx.rect(cX, cY, e.touches[0].clientX -cX ,e.touches[0].clientY-cY )
+        // ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         clear_canvas();
         if(dataImage!=null)
+        e.touches[0].clientY
         redraw();
         ctx.stroke()
         // alert("draw rect")
         //  console.log("cx"+cX);
         // console.log("cy"+cY); 
     }
-
-    function drawtrectangle() {
-        chosenDraw="Trect"
-        // alert("draw rect")
+    function choseTrectangle() {
+        
+        chosenDraw="Tochrect"
+        // alert("you have chosen rectangle")
+        // console.log("chosen "+chosenDraw);
     }
     function drawTocharc(e) {
         ctx.beginPath();
@@ -364,7 +382,7 @@ window.addEventListener('load', ()=>{
         if(dataImage!=null)
         redraw();
         ctx.stroke(); 
-        console.log("cx"+cX);
+        // console.log("cx"+cX);
     }
    
     function drawTcircle() {
@@ -391,7 +409,25 @@ window.addEventListener('load', ()=>{
      function choseTuchSline(){
         alert("you chose sline")
         chosenDraw="TSline"
-     }       
+     }      
+     function drawTochTriangle(e) {
+        ctx.beginPath();
+        ctx.globalCompositeOperation="source-over";
+        ctx.moveTo(cX, cY);
+        ctx.lineTo(e.touches[0].clientX,e.touches[0].clientY);
+        ctx.lineTo (e.touches[0].clientX-cX/2,e.touches[0].clientY);
+        ctx.lineTo(cX,cY);
+         clear_canvas();
+         if(dataImage!=null)
+         redraw();
+       ctx.stroke();
+    //    alert ("traingle")
+       
+    }
+    function choseTochTraiangle (){
+        chosenDraw="TochTriangle"
+        alert ("traingle")
+    } 
         
     
     //Eventlistenners
@@ -435,9 +471,9 @@ window.addEventListener('load', ()=>{
     doodleT2.addEventListener('click',chosedoodle);
 
     button3=document.getElementById("btn3")
-    button3.addEventListener('click',drawrectangle);
+    button3.addEventListener('click',choserectangle);
     button3=document.getElementById("btn3")
-    button3.addEventListener('touchstart',drawtrectangle);
+    button3.addEventListener('touchstart',choseTrectangle);
 
 
     button4=document.getElementById("btn4")
@@ -447,6 +483,9 @@ window.addEventListener('load', ()=>{
 
     button5=document.getElementById("btn5")
     button5.addEventListener('click',chosetraiangle);
+    button5=document.getElementById("btn5")
+    button5.addEventListener('touchstart',choseTochTraiangle);
+ 
 
     button6=document.getElementById("btn6")
     button6.addEventListener('click',choseSline);
