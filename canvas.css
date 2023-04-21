@@ -5,9 +5,7 @@
     
 
 }
-/* body::-webkit-scrollbar {
-    display: none;
- } */
+
   
 body{
     overflow-y: hidden; /* Hide vertical scrollbars }*/
@@ -19,11 +17,7 @@ body{
 border:10px solid rgba(223, 186, 35, 0.186);
 
 }
-/* .dropdown {
-    background-color: brown;
-    align-items: center;
-    position: relative;
-} */
+
 .tools{
     display: flex;
     justify-content: center;
