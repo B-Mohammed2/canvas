@@ -120,7 +120,8 @@ window.addEventListener('load', ()=>{
         ctx.globalCompositeOperation="source-over";
         ctx.moveTo(startX, startY);
         ctx.lineTo(e.clientX,e.clientY);
-        ctx.lineTo (e.clientX-startX/2,e.clientY);
+        let Difference=e.clientX-startX
+        ctx.lineTo(startX-Difference,e.clientY);
         ctx.lineTo(startX,startY);
          clear_canvas();
          if(dataImage!=null)
@@ -130,7 +131,6 @@ window.addEventListener('load', ()=>{
     }
     function chosetraiangle (){
         chosenDraw="triangle"
-        // alert ("traingle")
     }
     function drawSline(e) {
         
@@ -144,16 +144,9 @@ window.addEventListener('load', ()=>{
         ctx.stroke();
     }
      function choseSline(){
-        // alert("you chose sline")
         chosenDraw="Sline"
      }       
-    // function AddText(){
-    //     chosenDraw="addTexT"
-    // }
-    // function addTexT(e){
-    //      ctx.font = "linesize serif";
-    //      ctx.fillText("Hello world", startX, startY);
-    // }
+   
 
         //sizing text
     function lSize() {
@@ -256,21 +249,14 @@ window.addEventListener('load', ()=>{
     //     "touchstart",
     //     (e) => 
     function startTouch(e){
-            e.preventDefault();
-            ctx.beginPath();
-
+        e.preventDefault();
+        ctx.beginPath();
         cX = e.touches[0].clientX;
         cY = e.touches[0].clientY;
         painting = true; 
         draw(e);
         }
-        // ,
-        // false
-        // );
-
-    // canvas.addEventListener(
-    // "touchmove",
-    // (e) =>
+       
     function moveTouch(e) {
         if (!painting) return;
         // Catche the client X/Y coordinates
@@ -281,7 +267,6 @@ window.addEventListener('load', ()=>{
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol
-        // e.preventDefault();
         
         ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         ctx.stroke();
@@ -291,9 +276,7 @@ window.addEventListener('load', ()=>{
       
         //  alert("draw chose"+chosenDraw)
         // console.log("chosen drow"+chosenDraw)
-        
-
-
+    
         if (chosenDraw==="TSline")
         drawTSline(e)
 
@@ -305,18 +288,9 @@ window.addEventListener('load', ()=>{
         if (chosenDraw==="Tochrect")
         drawTochrect(e)
 
-        //  console.log("chosen "+chosenDraw)
-        
-
-
-        // console.log("draw")
-        // alert("tuch draw")
-        // console.log("start"+cX);
+     
 
     }
-    // ,
-    // false
-    // );
     
     // canvas.addEventListener(
     // "touchend"(e),=> 
@@ -340,9 +314,7 @@ window.addEventListener('load', ()=>{
 
         // Process the data…
     }
-    // ,
-    // false
-    // );
+   
     function doodleT(e){
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
@@ -354,25 +326,22 @@ window.addEventListener('load', ()=>{
     }
 
     function drawTochrect(e) {
-        // e.preventDefault();
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
         ctx.rect(cX, cY, e.touches[0].clientX -cX ,e.touches[0].clientY-cY )
         // ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         clear_canvas();
         if(dataImage!=null)
-        e.touches[0].clientY
+        // e.touches[0].clientY
         redraw();
         ctx.stroke()
-        // alert("draw rect")
-        //  console.log("cx"+cX);
-        // console.log("cy"+cY); 
+       
     }
-    function choseTrectangle() {
+    function choseTrectangle(e) {
         
         chosenDraw="Tochrect"
-        // alert("you have chosen rectangle")
-        // console.log("chosen "+chosenDraw);
+        e.preventDefault();
+        
     }
     function drawTocharc(e) {
         ctx.beginPath();
@@ -385,12 +354,12 @@ window.addEventListener('load', ()=>{
         // console.log("cx"+cX);
     }
    
-    function drawTcircle() {
-        alert("you have chosen circle")
+    function drawTcircle(e) {
+        // alert("you have chosen circle")
         chosenDraw="Tarc"
+        e.preventDefault()
     }
     function drawTSline(e) {
-        // e.preventDefault();
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
         // ctx.moveTo(e.touches[0].clientX, e.touches[0].clientY);
@@ -406,8 +375,8 @@ window.addEventListener('load', ()=>{
         // console.log(typeof cX);
         // console.log("cy"+cY);
     }
-     function choseTuchSline(){
-        alert("you chose sline")
+     function choseTuchSline(e){
+        e.preventDefault()
         chosenDraw="TSline"
      }      
      function drawTochTriangle(e) {
@@ -415,18 +384,17 @@ window.addEventListener('load', ()=>{
         ctx.globalCompositeOperation="source-over";
         ctx.moveTo(cX, cY);
         ctx.lineTo(e.touches[0].clientX,e.touches[0].clientY);
-        ctx.lineTo (e.touches[0].clientX-cX/2,e.touches[0].clientY);
+        let deltaX=e.touches[0].clientX-cX
+        ctx.lineTo (cX-deltaX,e.touches[0].clientY);
         ctx.lineTo(cX,cY);
          clear_canvas();
          if(dataImage!=null)
          redraw();
        ctx.stroke();
-    //    alert ("traingle")
-       
     }
-    function choseTochTraiangle (){
+    function choseTochTraiangle (e){
         chosenDraw="TochTriangle"
-        alert ("traingle")
+        e.preventDefault()
     } 
         
     
@@ -436,22 +404,11 @@ window.addEventListener('load', ()=>{
     canvas.addEventListener('mousemove',draw);
     canvas.addEventListener('mouseout',finishPosition);
 
-    // event listenners for toch screen
-    // canvas.addEventListener('touchstart',startPosition,false)
-    // canvas.addEventListener('touchmove',draw,false)
-    // canvas.addEventListener('touchend',finishPosition,false)
-    // canvas.addEventListener('touchout',finishPosition,false)
-
     canvas.addEventListener('touchstart',startTouch)
     canvas.addEventListener('touchmove',moveTouch)
     canvas.addEventListener('touchend',endTouch)
     canvas.addEventListener('touchout',endTouch)
 
-   
-
-    
-
-    // canvas.addEventListener('onchange',line_width)
     
     button1=document.getElementById("btn")
     button1.addEventListener('click',clear_page);
@@ -492,8 +449,6 @@ window.addEventListener('load', ()=>{
     buttonLine=document.getElementById("btn6")
     buttonLine.addEventListener('touchstart',choseTuchSline);
     
-    // button7=document.getElementById("addText")
-    // button7.addEventListener('click',AddText);
 
     lColor=document.getElementById("color-picker")
     lColor.addEventListener('input',lineColor);
@@ -510,7 +465,7 @@ window.addEventListener('load', ()=>{
     };
     
 
-    //sizing
+    //sizing the window
 
 window.addEventListener('resize', function(event) {
     canvas.height = window.innerHeight;
