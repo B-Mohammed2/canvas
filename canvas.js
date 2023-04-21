@@ -329,10 +329,8 @@ window.addEventListener('load', ()=>{
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
         ctx.rect(cX, cY, e.touches[0].clientX -cX ,e.touches[0].clientY-cY )
-        // ctx.rect(startX, startY, e.clientX -startX, e.clientY - startY );
         clear_canvas();
         if(dataImage!=null)
-        // e.touches[0].clientY
         redraw();
         ctx.stroke()
        
