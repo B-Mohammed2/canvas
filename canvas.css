@@ -17,7 +17,7 @@ body{
 border:10px solid rgba(223, 186, 35, 0.186);
 
 }
-
+/* tools div */
 .tools{
     display:flex;
     justify-content: center;
@@ -28,6 +28,7 @@ border:10px solid rgba(223, 186, 35, 0.186);
     margin: 10px;
     
 }
+/* buttns design */
 button, input{
     background-color: white;
     padding: 5px;
@@ -46,9 +47,7 @@ border-color: rgba(38, 131, 53, 0.505);
 border-width: 1px;
 
 }
-/* for (let i =0; i <drawings.length; i++) {
-    let drawing=drawings
-} */
+
 .circle {
     background-color: rgba(235, 219, 219, 0.393);
     border-radius: 50%;
