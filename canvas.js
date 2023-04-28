@@ -394,6 +394,14 @@ window.addEventListener('load', ()=>{
         chosenDraw="TochTriangle"
         e.preventDefault()
     } 
+        //sizing the window
+
+    window.addEventListener('resize', function(event) {
+        canvas.height = window.innerHeight-100;
+        canvas.width = window.innerWidth;
+        clear_canvas();
+        redraw()
+    }, true);
         
     
     //Eventlistenners
@@ -463,11 +471,7 @@ window.addEventListener('load', ()=>{
     };
     
 
-    //sizing the window
 
-window.addEventListener('resize', function(event) {
-    canvas.height = window.innerHeight-100;
-    canvas.width = window.innerWidth;
-}, true);
+
 
 
