@@ -19,7 +19,7 @@ border:10px solid rgba(223, 186, 35, 0.186);
 }
 
 .tools{
-    display: flex;
+    display:flex;
     justify-content: center;
     border: 1px solid black;
     border-radius: 10px;
