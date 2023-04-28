@@ -1,4 +1,4 @@
-window.addEventListener('load', ()=>{
+window.addEventListener("load", ()=>{
     const canvas = document.querySelector("#canvas");
     const ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight;
@@ -15,11 +15,8 @@ window.addEventListener('load', ()=>{
     let linesize=1;
     let lineCol= "black";
     let imagePointer=-1;
-    let undoImage=[]; // Array store a serise of canvas image take it to varios point 
-    // let StartTouch=function startPosition(e){
-    //     preventDefault()
-    //     beginPath
-    // }
+    // Array store a serise of canvas image take it to varios point 
+     let undoImage=[];
 
     function startPosition(e){
         ctx.beginPath();
