@@ -327,8 +327,10 @@ window.addEventListener("load", ()=>{
         //sizing the window
 
     window.addEventListener('resize', function(event) {
-        canvas.height = window.innerHeight-100;
-        canvas.width = window.innerWidth;
+        // canvas.height = window.innerHeight-100;
+        // canvas.width = window.innerWidth;
+        canvas.height = 2000;
+        canvas.width = 2000;
         clear_canvas();
         redraw()
     }, true);

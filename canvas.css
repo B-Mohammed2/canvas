@@ -19,13 +19,16 @@ border:10px solid rgba(223, 186, 35, 0.186);
 }
 /* tools div */
 .tools{
-    display:flex;
+    position: fixed;
+    bottom: 0cm;
+    width:100%;
     justify-content: center;
     border: 1px solid black;
     border-radius: 10px;
     align-items: center;
     padding: 10px;
     margin: 10px;
+    background-color: white;
     
 }
 /* buttns design */
