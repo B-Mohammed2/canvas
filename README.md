@@ -12,10 +12,37 @@
 
     The website was tested on (Chrome,Safari,Microsoft Edge ) and works perfectly on tablet and mobile phone devices and it is responsive. However, it is recomended to be used on big screen due to the nature of the website that needs space on the screen to do your drawing on it.
 
-## tests
+## tests with mouse
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action| Screenshot of the test|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | :-------------------: | 
-| 1         | Verify that link woks | The website opens| test Passed| N/A          |  |
+| 1         | Verify that link works | The website opens| test Passed| N/A          |  |
+| 2         | Verify that draws with mouse| drawing oncanvas| test Passed| N/A          |  |
+| 3        | Verify that color changes | color of the line change acording to the chosen color| test Passed| N/A          |  |
+| 4         | Verify that width of line changes | The width of line changes acording to the number chosen| test Passed| N/A          |  |
+| 5       | Verify that bin button works  | The canvas cleard completly| test Passed| N/A          |  |
+| 6         | Verify that undo button works | gose back one action| test Passed| N/A          |  |
+| 7         | Verify that redo button works | goes forward one action after undo| test Passed| N/A          |  |
+| 8        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          |  |
+| 9         | Verify that size of eraser changes with line width size value | The size of clareing area changes| test Passed| N/A          |  |
+| 10       | Verify that pencil button change to doodle again | draw on the canvas| test Passed| N/A          |  |
+| 11       | Verify that rectangle button works | draw rectangle on the canvas| test Passed| N/A          |  |
+| 12       | Verify that cercle button works | draw cercle on the canvas| test Passed| N/A          |  |
+| 13       | Verify that triangle button works | draw triangle on canvas| test Passed| N/A          |  |
+| 14       | Verify that straight line button works| draw stright line| test Passed| N/A          |  |
+| 15       | Verify that save button works | save the image in the device| test Passed| N/A          |  |
+| 16       | Verify that uploading button works | uploads an image in to the canvas| test Passed| N/A          |  |
+
+## tests with touch screen
+| Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action| Screenshot of the test|
+| :-------: | :-------------: | :--------------: | :------------: | :------------: | :-------------------: | 
+| 1        | Verify that  draws with tuchscreen| drawing on the canvas| test Passed| N/A          |  |
+| 2       | Verify that pencil button change to doodle again | draw on the canvas| test Passed| N/A          |  |
+| 3       | Verify that rectangle button works | draw a rectangle on the canvas| test Passed| N/A          |  |
+| 4       | Verify that cercle button works | draw a cercle on the canvas| test Passed| N/A          |  |
+| 5       | Verify that triangle button works | draw a triangle on canvas| test Passed| N/A          |  |
+| 6      | Verify that straight line button works| draw a stright line| test Passed| N/A          |  |
+| 7        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          |  |
+
 
 ## Who can use it
     The Website was created to be as simple as it can be to serve the maximum amount of users and the recomended age is 4+.
