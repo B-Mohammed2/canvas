@@ -57,7 +57,7 @@ The website was tested on (Chrome,Safari,Microsoft Edge ) and works perfectly on
 The Website was created to be as simple as it can be to serve the maximum amount of users and the recomended age is 4+.
 
 ## How it works
-the website is not very defftent from other common canvas app or programs. you have all the canvas to draw on and buttons that their appearence discribes its function to be used to make your drawing eassier.
+the website is not very deffrent from other common canvas app or programs. you have all the canvas to draw on and buttons that their appearence discribes its function to be used to make your drawing eassier.
 
 
 
