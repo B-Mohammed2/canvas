@@ -15,48 +15,59 @@
     </canvas>
     
     <!-- tools buttons -->
-    <div class="tools">
-      <button id="btn">
-        <i class="fa fa-trash" style="font-size:24px;color: rgb(105, 105, 174);"></i>
-      </button>
-      <button id="undo">
-    
-        <i class="fa fa-rotate-left" style="font-size:24px; color: rgb(34, 151, 100);"></i>
-      </button>
-      <button id="Redo">
-        <i class="fa fa-rotate-right"  style="font-size:24px; color: rgb(105, 105, 174);"></i>
-      </button>
-      <button id="Eraser">
-        <i class="fa fa-eraser" style="font-size:24px; color: rgb(192, 138, 63);"></i>
+    <div class="tools-container">
+      <div class="tools">
+        <button id="clear_all">
+          <i class="fa fa-trash" style="font-size:24px;color: rgb(105, 105, 174);" alt="trash"></i>
+        </button>
+        <button id="undo">
+      
+          <i class="fa fa-rotate-left" style="font-size:24px; color: rgb(34, 151, 100);" alt="undo"></i>
+        </button>
+        <button id="redo">
+          <i class="fa fa-rotate-right"  style="font-size:24px; color: rgb(105, 105, 174);" alt="redo"></i>
+        </button>
+        <button id="Eraser">
+          <i class="fa fa-eraser" style="font-size:24px; color: rgb(192, 138, 63);" alt="eraser"></i>
+        </button>
+
+        <button id="pencil">
+          <i class="fa fa-pencil" style="font-size:24px; color:rgb(112, 88, 43)" alt="pencil"></i>
+        </button>
+        <div>
+          <div class="square" id="draw_square">
+            
+          </div>
+        </div>
+        <div>
+          <div class="circle" id="draw_circle">
+            
+          </div>
+        </div>
+        <div>
+          <div class="triangle" id="draw_triangle">
+          </div>
+        </div>
+        <button id="draw_line">
+          <img src="assets/image/straightLine.png" width="24px" hight="24px" alt="straight_line">
+        </button>
+        <input type="color" id="color-picker">
+        <input type="number" id="line_width"  min="1" max="61" step="5">
+        <button id="saveImage">
+          <a href id="save" download="canvas.png" target="_blank">
+            <i class="fa fa-save" style="font-size:24px"></i>  
+          </a>
+        </button>
+        <input type="file" id="snap" accept="image/*;capture=camera" >
+      <button id="help">
+        help
+
       </button>
 
-      <button id="btn2">
-        <i class="fa fa-pencil" style="font-size:24px; color:rgb(112, 88, 43)"></i>
-      </button>
-      <button id="btn3">
-        <div class="square"></div>
-      </button>
-      
-      <button id="btn4">
-        <div class="circle"></div>
-      </button>
-      <button id="btn5">
-        <div class="triangle"></div>
-      </button>
-      <button id="btn6">
-        <img src="assets/image/straightLine.png" width="24px" hight="24px">
-      </button>
-      <input type="color" id="color-picker">
-      <input type="number" id="line_width"  min="1" max="61" step="5">
-      <button id="saveImage">
-        <a href id="save" download="canvas.png" target="_blank">
-          <i class="fa fa-save" style="font-size:24px"></i>  
-        </a>
-      </button>
-      <input type="file" id="snap" accept="image/*;capture=camera" >
-
-      
+      </div>
     </div>
+      
+    
   
    <script src="canvas.js"></script>
 </body>

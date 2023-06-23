@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/canvas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>BMCanvas</title>
+</head>
+<body>
+    <h2>Info page</h2>
+    <ul>
+        <li>
+            <i class="fa fa-trash" style="font-size:24px;color: rgb(105, 105, 174);" alt="trash"></i>This button is to clear the canvas.
+        </li>
+        <li>
+            <i class="fa fa-rotate-left" style="font-size:24px; color: rgb(34, 151, 100);" alt="undo"></i> This button is to go back one step with each click.
+        </li>
+        <li>
+            <i class="fa fa-rotate-right"  style="font-size:24px; color: rgb(105, 105, 174);" alt="redo"></i> This button is to go forward one step with each click after undoing.
+        </li>
+        <li>
+            <i class="fa fa-eraser" style="font-size:24px; color: rgb(192, 138, 63);" alt="eraser"></i> This button is Eraser. 
+        </li>
+        <li>
+            <i class="fa fa-pencil" style="font-size:24px; color:rgb(112, 88, 43)" alt="pencil"></i> This button is for doodling.
+        </li>
+        <li>
+            <div class="square" id="btn3"> </div> This button is to draw square and rectangles.
+        </li>
+        <li>
+            <div class="circle" id="btn4"> </div> This button is to draw cercle.
+        </li>
+        <li>
+            <div class="triangle" id="btn5"> </div> This button is to draw triangle.
+        </li>
+        <li>
+            <img src="assets/image/straightLine.png" width="24px" hight="24px" alt="straight_line"> This button is to draw straight lines.
+        </li>
+        <li>
+            <input type="color" id="color-picker"> This input is to chose the color for doodling and drawing all the shapes.
+        </li>
+        <li>
+            <input type="number" id="line_width"  min="1" max="61" step="5"> This input is to chose the width of drawing lines(minmum=1px and maximum=61).The numbers could be entered manually or using the arrows that increas or decreas 5 with each click.
+        </li>
+        <li>
+            <i class="fa fa-save" style="font-size:24px"></i> This button is to save the canvas as an image in your device.
+        </li>
+        <li>
+            <img src="assets/image/upload_image.png" width="110px">This button is to upload image from your devise to the canvase(the defult size setting for uploading is the image original size.)
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,9 +1,9 @@
 window.addEventListener("load", ()=>{
     const canvas = document.querySelector("#canvas");
     const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight-100;
     canvas.width = window.innerWidth;
-    canvas.height=canvas.height-100;
+    // canvas.height=canvas.height-100;
 
     //variable
     let startX;
@@ -324,7 +324,7 @@ window.addEventListener("load", ()=>{
         chosenDraw="TochTriangle"
         e.preventDefault()
     } 
-        //sizing the window
+     //resizing the window
 
     window.addEventListener('resize', function(event) {
         // canvas.height = window.innerHeight-100;
@@ -348,8 +348,8 @@ window.addEventListener("load", ()=>{
     canvas.addEventListener('touchout',endTouch)
 
     
-    button1=document.getElementById("btn")
-    button1.addEventListener('click',clear_page);
+    clearAll=document.getElementById("clear_all")
+    clearAll.addEventListener('click',clear_page);
 
     erasebtn=document.getElementById("Eraser")
     erasebtn.addEventListener('click',eraser)
@@ -357,34 +357,34 @@ window.addEventListener("load", ()=>{
     undoButton=document.getElementById("undo")
     undoButton.addEventListener('click',goBack);
 
-    redoBtn=document.getElementById("Redo")
+    redoBtn=document.getElementById("redo")
     redoBtn.addEventListener('click',goNext);
 
-    button2=document.getElementById("btn2")
+    button2=document.getElementById("pencil")
     button2.addEventListener('click',ChooseLine);
-    doodleT2=document.getElementById("btn2")
+    doodleT2=document.getElementById("pencil")
     doodleT2.addEventListener('click',chosedoodle);
 
-    button3=document.getElementById("btn3")
+    button3=document.getElementById("draw_square")
     button3.addEventListener('click',choserectangle);
-    button3=document.getElementById("btn3")
+    button3=document.getElementById("draw_square")
     button3.addEventListener('touchstart',choseTrectangle);
 
 
-    button4=document.getElementById("btn4")
+    button4=document.getElementById("draw_circle")
     button4.addEventListener('click',drawcircle);
-    button4=document.getElementById("btn4")
+    button4=document.getElementById("draw_circle")
     button4.addEventListener('touchstart',drawTcircle);
 
-    button5=document.getElementById("btn5")
+    button5=document.getElementById("draw_triangle")
     button5.addEventListener('click',chosetraiangle);
-    button5=document.getElementById("btn5")
+    button5=document.getElementById("draw_triangle")
     button5.addEventListener('touchstart',choseTochTraiangle);
  
 
-    button6=document.getElementById("btn6")
+    button6=document.getElementById("draw_line")
     button6.addEventListener('click',choseSline);
-    buttonLine=document.getElementById("btn6")
+    buttonLine=document.getElementById("draw_line")
     buttonLine.addEventListener('touchstart',choseTuchSline);
     
 
@@ -401,6 +401,19 @@ window.addEventListener("load", ()=>{
         dataUrl = canvas.toDataURL('image/png');
         save.href = dataUrl;
     };
+
+    // Help button
+    popupBtn=document.getElementById("help") 
+    popupBtn.addEventListener('click',Mypopup)
+    function Mypopup(){
+        var windowFeatures = "left=1000,top=100,width=300,height=600";
+         window.open(
+          "help.html",
+          "popup",
+          windowFeatures
+        );
+    }
+   
     
 
 

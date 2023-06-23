@@ -61,6 +61,10 @@ the website is not very deffrent from other common canvas app or programs. you h
 
 
 
+##  How to deploying
+I deploy the website according to the steps in this link:
+https://docs.github.com/en/pages/quickstart#
 
 # Live link for the website
+
 https://b-mohammed2.github.io/
