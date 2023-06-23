@@ -54,6 +54,10 @@ The website was tested on (Chrome,Safari,Microsoft Edge ) and works perfectly on
 ![](assets/image/save.png)
 
 ## Validation
+#### jslint 
+ This is the link to the validator webpage https://www.jslint.com. As shown in the screenshot there are no errors. however, there are 37 warrning. They are mostley to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these  changes it costs the program to crush. Another reason for not correcting is that the programe is running properly and have no  problem.
+ ![](assets/image/screenshot/jslint1.png)
+![](assets/image/screenshot/jslint2.png)
 
 
 ## Who can use it
