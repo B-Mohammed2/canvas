@@ -37,7 +37,9 @@ window.addEventListener("load", ()=>{
         painting = false;
     }
     function draw(e){
-        if (!painting) return;
+        if (!painting){
+         return;
+        }
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol;
