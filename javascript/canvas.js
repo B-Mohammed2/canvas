@@ -37,14 +37,16 @@ window.addEventListener("load", ()=>{
         painting = false;
     }
     function draw(e){
-        if (!painting){
-         return;
-        }
+        if (!painting) return;
+        e.stopImmediatePropagation();
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle= lineCol;
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
+        if (chosenDraw==="line")
+        doodle(e)
+        ctx.globalCompositeOperation="source-over";
         if (chosenDraw==="rect") 
            drawrect(e)
          if (chosenDraw==="arc") 
@@ -57,16 +59,18 @@ window.addEventListener("load", ()=>{
          drawSline(e)
         if (chosenDraw==="whiteline")
          drawWhiteLine(e)
-        if (chosenDraw==="line")
-        doodle(e)
         if (chosenDraw==="addTexT")
         addTexT(e)
+        console.log("chosenDraw is"+ chosenDraw)
     }
     function doodle(e){
         ctx.beginPath();
+        // this code is from w3school to draw over the eraser
         ctx.globalCompositeOperation="source-over";
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
+        
+        
     }
     function ChooseLine(){
         chosenDraw="line"
@@ -80,12 +84,10 @@ window.addEventListener("load", ()=>{
         redraw();
         ctx.stroke()
     }
-
     function choserectangle() {
         chosenDraw="rect"
         
     }
-    
     function drawarc(e) {
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
@@ -95,7 +97,6 @@ window.addEventListener("load", ()=>{
         redraw();
         ctx.stroke();  
     }
-   
     function drawcircle() {
         chosenDraw="arc"
     }
@@ -117,7 +118,6 @@ window.addEventListener("load", ()=>{
         chosenDraw="triangle"
     }
     function drawSline(e) {
-        
         ctx.beginPath();
         ctx.globalCompositeOperation="source-over";
         ctx.moveTo(startX, startY);
@@ -130,9 +130,7 @@ window.addEventListener("load", ()=>{
      function choseSline(){
         chosenDraw="Sline"
      }       
-   
-
-        //sizing text
+     //sizing text
     function lSize() {
         linesize= document.getElementById("line_width").value
     }
@@ -160,7 +158,6 @@ window.addEventListener("load", ()=>{
         return image;
         }
     }
-    
     function redraw(){
        ctx.drawImage(dataImage,0,0);
     }
@@ -171,10 +168,8 @@ window.addEventListener("load", ()=>{
          imagePointer--;
         dataImage=undoImage[imagePointer];
         clear_canvas();
-        redraw()}
-        
+        redraw()} 
     }
-
     function goNext() {
       // looking to the previos load img of canvas  
       if(imagePointer<undoImage.length-1){
@@ -219,13 +214,11 @@ window.addEventListener("load", ()=>{
        
     function moveTouch(e) {
         if (!painting) return;
-        
         e.preventDefault();
         e.stopImmediatePropagation();
         ctx.lineWidth= linesize;
         ctx.lineCap = "round";
-        ctx.strokeStyle= lineCol
-        
+        ctx.strokeStyle= lineCol;
         ctx.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         ctx.stroke();
         if (chosenDraw==="doodle")
@@ -338,7 +331,7 @@ window.addEventListener("load", ()=>{
     canvas.addEventListener('mousedown',startPosition);
     canvas.addEventListener('mouseup',finishPosition);
     canvas.addEventListener('mousemove',draw);
-    canvas.addEventListener('mouseout',finishPosition);
+    canvas.addEventListener('mouseleave',finishPosition);
     // event listener for touchscreen
     canvas.addEventListener('touchstart',startTouch)
     canvas.addEventListener('touchmove',moveTouch)
