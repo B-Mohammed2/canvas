@@ -3,7 +3,6 @@ window.addEventListener("load", ()=>{
     const ctx = canvas.getContext("2d");
     canvas.height = window.innerHeight-100;
     canvas.width = window.innerWidth;
-    // canvas.height=canvas.height-100;
 
     //variable
     // x cordinet when mouse clicked down
@@ -28,9 +27,6 @@ window.addEventListener("load", ()=>{
         draw(e);
     }
     function finishPosition(){
-        // painting = false;
-        // ctx.beginPath();
-        // alert(imagePointer)
         if (painting ==true)
         {dataImage= convertCanvasToImage();
         //points to the current image of the canvas in the undoimage array
@@ -245,17 +241,14 @@ window.addEventListener("load", ()=>{
 
     }
     function endTouch(e) {
-        let deltaX;
-        let deltaY;
-        painting = false;
-        ctx.beginPath();
-        deltaX = e.changedTouches[0].clientX - cX;
-        deltaY = e.changedTouches[0].clientY - cY;
-        dataImage= convertCanvasToImage();
+        if (painting ==true)
+        {dataImage= convertCanvasToImage();
+        //points to the current image of the canvas in the undoimage array
         imagePointer++;
         undoImage[imagePointer]=dataImage;
-
-        // Process the data…
+        }
+        //stop painting when mouse up
+        painting = false;
     }
    
     function doodleT(e){
@@ -332,8 +325,6 @@ window.addEventListener("load", ()=>{
     } 
      //resizing the window
     window.addEventListener('resize', function(event) {
-        // canvas.height = window.innerHeight-100;
-        // canvas.width = window.innerWidth;
         canvas.height = 2000;
         canvas.width = 2000;
         clear_canvas();
