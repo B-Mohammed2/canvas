@@ -6,7 +6,9 @@ window.addEventListener("load", ()=>{
     // canvas.height=canvas.height-100;
 
     //variable
+    // x cordinet when mouse clicked down
     let startX;
+    // y cordinet when mouse clicked down
     let startY;
     let painting =false;
     let chosenDraw="";
@@ -16,7 +18,7 @@ window.addEventListener("load", ()=>{
     let lineCol= "black";
     let imagePointer=-1;
     // Array store a serise of canvas image take it to varios point 
-     let undoImage=[];
+    let undoImage=[];
 
     function startPosition(e){
         ctx.beginPath();
@@ -26,11 +28,17 @@ window.addEventListener("load", ()=>{
         draw(e);
     }
     function finishPosition(){
-        painting = false;
-        ctx.beginPath();
-        dataImage= convertCanvasToImage();
+        // painting = false;
+        // ctx.beginPath();
+        // alert(imagePointer)
+        if (painting ==true)
+        {dataImage= convertCanvasToImage();
+        //points to the current image of the canvas in the undoimage array
         imagePointer++;
         undoImage[imagePointer]=dataImage;
+        }
+        //stop painting when mouse up
+        painting = false;
     }
     function draw(e){
         if (!painting) return;
@@ -147,18 +155,20 @@ window.addEventListener("load", ()=>{
         };
     // code to memorise every step in the canvas
     function convertCanvasToImage(){
+        if (painting == true){
         let canvas=document.getElementById("canvas");
         let image= new Image();
         image.src=canvas.toDataURL("img/png");
         return image;
+        }
     }
     
     function redraw(){
        ctx.drawImage(dataImage,0,0);
     }
-        // undo button
+    // undo button
     function goBack(){
-      //look to the previous load img of the canvas
+    //look to the previous load img of the canvas
       if(imagePointer!=0){
          imagePointer--;
         dataImage=undoImage[imagePointer];
@@ -167,9 +177,8 @@ window.addEventListener("load", ()=>{
         
     }
 
-
     function goNext() {
-       
+      // looking to the previos load img of canvas  
       if(imagePointer<undoImage.length-1){
         imagePointer++;
         dataImage=undoImage[imagePointer];
@@ -189,8 +198,6 @@ window.addEventListener("load", ()=>{
         ctx.stroke();
     }
 
-        //upload file
-
    function clear_canvas() {
     ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
     
@@ -198,7 +205,6 @@ window.addEventListener("load", ()=>{
    function clear_page() {
     ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
     dataImage=null;
-    
    }
     let cX;
     let cY;
@@ -325,7 +331,6 @@ window.addEventListener("load", ()=>{
         e.preventDefault()
     } 
      //resizing the window
-
     window.addEventListener('resize', function(event) {
         // canvas.height = window.innerHeight-100;
         // canvas.width = window.innerWidth;
@@ -413,7 +418,7 @@ window.addEventListener("load", ()=>{
           windowFeatures
         );
     }
-   
+  
     
 
 
