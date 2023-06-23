@@ -61,7 +61,6 @@ window.addEventListener("load", ()=>{
          drawWhiteLine(e)
         if (chosenDraw==="addTexT")
         addTexT(e)
-        console.log("chosenDraw is"+ chosenDraw)
     }
     function doodle(e){
         ctx.beginPath();

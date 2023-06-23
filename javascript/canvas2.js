@@ -39,40 +39,45 @@ window.addEventListener("load", () => {
     }
 
     function draw(e) {
-        if (!painting) return;
-        e.stopImmediatePropagation();
+        if (!painting){
+            return;
+        }
         ctx.lineWidth = linesize;
         ctx.lineCap = "round";
         ctx.strokeStyle = lineCol;
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
-        if (chosenDraw === "line")
-            doodle(e)
+        if (chosenDraw === "line"){
+            doodle(e);
+        }
+        //this is to doodle after erasing
         ctx.globalCompositeOperation = "source-over";
-        if (chosenDraw === "rect")
-            drawrect(e)
-        if (chosenDraw === "arc")
-            drawarc(e)
-        if (chosenDraw === "Sline")
-            drawSline(e)
-        if (chosenDraw === "triangle")
-            drawtriangle(e)
-        if (chosenDraw === "Sline")
-            drawSline(e)
-        if (chosenDraw === "whiteline")
-            drawWhiteLine(e)
-        if (chosenDraw === "addTexT")
-            addTexT(e)
+        
+        if (chosenDraw === "rect"){
+            drawrect(e);
+        }
+        if (chosenDraw === "arc"){
+            drawarc(e);
+        }
+        if (chosenDraw === "Sline"){
+            drawSline(e);
+        }
+        if (chosenDraw === "triangle"){
+            drawtriangle(e);
+        }
+        if (chosenDraw === "Sline"){
+            drawSline(e);
+        }
+        if (chosenDraw === "whiteline"){
+            drawWhiteLine(e);
+        }
     }
 
     function doodle(e) {
         ctx.beginPath();
         // this code is from w3school to draw over the eraser
-        ctx.globalCompositeOperation = "source-over";
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
-
-
     }
 
     function ChooseLine() {
@@ -86,8 +91,9 @@ window.addEventListener("load", () => {
             .clientY -
             startY);
         clear_canvas();
-        if (dataImage != null)
+        if (dataImage != null){
             redraw();
+        }
         ctx.stroke()
     }
 
@@ -105,8 +111,9 @@ window.addEventListener("load", () => {
             .clientY,
             0, 2 * Math.PI);
         clear_canvas();
-        if (dataImage != null)
+        if (dataImage != null){
             redraw();
+        }
         ctx.stroke();
     }
 
