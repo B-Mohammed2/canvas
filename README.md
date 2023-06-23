@@ -67,4 +67,4 @@ https://docs.github.com/en/pages/quickstart#
 
 # Live link for the website
 
-https://b-mohammed2.github.io/
+https://b-mohammed2.github.io/canvas/

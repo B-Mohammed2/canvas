@@ -135,7 +135,7 @@ window.addEventListener("load", ()=>{
         lineCol= document.getElementById("color-picker").value
   
     }
-        // getting the chosen image from device and puting it on the canvas.
+     // getting the chosen image from device and puting it on the canvas.
     var snap = document.getElementById("snap");
         snap.onchange=function(e){ 
           var url = URL.createObjectURL(e.target.files[0]);
@@ -402,13 +402,13 @@ window.addEventListener("load", ()=>{
         save.href = dataUrl;
     };
 
-    // Help button
+    // Help button window
     popupBtn=document.getElementById("help") 
     popupBtn.addEventListener('click',Mypopup)
     function Mypopup(){
         var windowFeatures = "left=1000,top=100,width=300,height=600";
          window.open(
-          "help.html",
+          "html/help.html",
           "popup",
           windowFeatures
         );
