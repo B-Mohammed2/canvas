@@ -68,6 +68,13 @@ Then I should be presented with a window or dialog box containing instructions, 
 This is  a picture of the website showing the full canvas with the tools bar. The tool bar was positioned in the center bottom of the page as belived would more comfortable or user to be in that posotion.
 I used picturse instead of texts to discribe each buttns function. The icons (Trash, undo,redo, eraser, pencil, save) were used from w3school and set the colors acording my prefrance as showen in the screenshot https://www.w3schools.com/icons/ . However, I found it mor e appropreat to use css for icons(square,cercle,triangle) and I used How to -CSS shape https://www.w3schools.com/howto/howto_css_shapes.asp as shown in the link.
 
+## Wireframe
+Design for the desktop screen.
+![](assets/image/screenshot/wireframe/wireframe-desktop.png)
+Design for the tablet and iPad screen.
+![](assets/image/screenshot/wireframe/wireframe-tablet.png)
+Design for the smartphone screen devices.
+![](assets/image/screenshot/wireframe/wireframe-smartphone.png)
 
 ## Where it works
 
@@ -123,8 +130,11 @@ The website was tested on (Chrome,Safari,Microsoft Edge ) and works perfectly on
  This is the link to the validator webpage https://www.jslint.com. As shown in the screenshot there are no errors. however, there are 37 warrning. They are mostley to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these  changes it costs the program to crush. Another reason for not correcting is that the programe is running properly and have no  problem.
  ![](assets/image/screenshot/jslint1.png)
 ![](assets/image/screenshot/jslint2.png)
+### JS hint 
+No error detected https://jshint.com.
 
 #### html validator
+
 
 
 
