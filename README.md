@@ -29,11 +29,9 @@ When I select the drawing tool,
 Then I should be able to draw freehand on the canvas using my mouse or touch input.
 
 Scenario 2: Undo and Redo Actions
-Given that I have made changes to the canvas,
-When I click the "Undo" button,
-Then the previous action should be undone, reverting the canvas to its previous state.
-And when I click the "Redo" button,
-Then the undone action should be restored, bringing the canvas back to the modified state.
+Given that I have draw somthing on the canvas,
+When I click on "Undo" button,the previous action should be undone and revert the canvas to its previous state.
+And if I click on "Redo" button,the undone action should be restored, bringing the canvas back to the modified state.
 
 Scenario 3: Erasing
 Given that I am on the canvas page,
@@ -42,8 +40,8 @@ Then I should be able to erase specific parts of the drawing or image on the can
 
 Scenario 4: Shape Drawing
 Given that I am on the canvas page,
-When I select a shape tool (such as square, circle, or triangle),
-Then I should be able to draw the selected shape on the canvas by clicking and dragging, allowing me to create geometric shapes effortlessly.
+When I select any giometric shape from the toolbar such as (square, circle, or triangle),
+I should be able to draw the selected shape on the canvas by clicking and dragging, allowing me to create geometric shapes effortlessly.
 
 Scenario 5: Drawing Straight Lines
 Given that I am on the canvas page,
@@ -62,23 +60,22 @@ Then I should be able to adjust the thickness of lines and shapes on the canvas,
 
 Scenario 8: Saving Images
 Given that I am on the canvas page,
-When I click the "Save Image" button,
-Then the current canvas image should be saved to a file format of my choice (such as PNG or JPEG), allowing me to download and share my artwork.
+when I click on "Save Image" button,
+The current canvas image should be saved to a file format of my choice (such as PNG or JPEG), to allow me  download and share my artwork.
 
 Scenario 9: Uploading Images
 Given that I am on the canvas page,
-When I click the "Upload Image" button,
-Then I should be able to select an image file from my device and have it displayed on the canvas, enabling me to edit and make amendments to existing images.
+When I click  "Upload Image" button,
+I should be able to select an image file from my device and have it displayed on the canvas, to enabl me to edit and make amendments to existing images.
 
 Scenario 10: Help and Instructions
-Given that I am using the web application,
-When I click the "Help" button,
-Then I should be presented with a window or dialog box containing instructions, tips, and information on how to use the various tools and features of the application, providing me with guidance and support during my creative process.
+Given that I am on the canvas page,
+when I click on "Help" button,
+I should be introduced with instructions in a window or dialog box. Moreover,it should containe tips, and information on how to use the various tools and features of the application, providing me with guidance and support during my creative process.
 
 
 ## Design
-The design of the web application focuses on providing a user-friendly and intuitive interface that allows them to express their creativity and conveniently edit images. 
-Here are the key design aspects of the web app:
+This web application was designed to provide a smooth and simple interface that allows the user to express their creativity and appropriately edit images. 
 
 1. Responsiveness and Layout of the web app: The web is designed with a responsive layout to adapt to different screen sizes and devices. This aspect provides users with a variety of options to access the app from  desktop computers, tablets, and smartphones.
 
@@ -93,12 +90,6 @@ Here are the key design aspects of the web app:
 6. Uploading Image and Editing: The web app offers the capability to edit images by uploading the desired image to the canvas using the upload button.
 
 7. Save Button: After compliting the project you can save the canvas as image in your device aoutomaticly by clicking on the save button.
-
-
-
-
-<!-- This is  a picture of the website showing the full canvas with the tools bar. The tool bar was positioned in the center bottom of the page as belived would more comfortable or user to be in that posotion.
-I used picturse instead of texts to discribe each buttns function. The icons (Trash, undo,redo, eraser, pencil, save) were used from w3school and set the colors acording my prefrance as showen in the screenshot https://www.w3schools.com/icons/ . However, I found it mor e appropreat to use css for icons(square,cercle,triangle) and I used How to -CSS shape https://www.w3schools.com/howto/howto_css_shapes.asp as shown in the link. -->
 
 ## Wireframe
 Design for the desktop screen.
@@ -180,17 +171,17 @@ the website is not very deffrent from other common canvas app or programs. you h
 
 ## Acknowledgments
 
-We would like to express our sincere gratitude and acknowledge the following resources for their valuable contributions to this project:
+I would like to express my sincere gratitude and acknowledge the following resources for their valuable contributions to this project:
 
-- **Flaticon** (https://www.flaticon.com) and **Font Awesome** (https://fontawesome.com): We extend our special thanks to Flaticon and Font Awesome for providing an extensive collection of high-quality icons used in the tool bar of our application. These icons have greatly enhanced the visual appeal and functionality of our project.
+- **Flaticon** (https://www.flaticon.com) and **Font Awesome** (https://fontawesome.com): I extend my special thanks to Flaticon and Font Awesome for providing an extensive collection of high-quality icons used in the tool bar of our application. These icons have greatly enhanced the visual appeal and functionality of the project.
 
-- **OpenAI's ChatGPT**: We would like to express our deep appreciation to OpenAI's ChatGPT for providing invaluable assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
+- **OpenAI's ChatGPT**: I would like to express our deep appreciation to OpenAI's ChatGPT for providing invaluable assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
 
-- **Mozilla Developer Network** (https://developer.mozilla.org/en-US/docs/Web/JavaScript): We would like to acknowledge the Mozilla Developer Network (MDN) for their comprehensive and reliable documentation on JavaScript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of JavaScript effectively.
+- **Mozilla Developer Network** (https://developer.mozilla.org/en-US/docs/Web/JavaScript): I would like to acknowledge the Mozilla Developer Network (MDN) for their comprehensive and reliable documentation on JavaScript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of JavaScript effectively.
 
-- **W3Schools** (https://www.w3schools.com): We express our appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing us with practical examples and guidance on various web development topics, including HTML, CSS, and JavaScript.
+- **W3Schools** (https://www.w3schools.com): I express my appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing me with practical examples and guidance on various web development topics, including HTML, CSS, and JavaScript.
 
-We are grateful for the contributions of these resources, which have significantly enriched our project and helped us in achieving our goals.
+I'm grateful for the contributions of these resources, which have significantly enriched this project and helped in achieving my goals.
 
 
 ##  How to deploying
