@@ -1,25 +1,23 @@
 # Navigation
 - [Introduction](#introduction)
-- [User Stories](#User Stories)
+- [User Stories](#user-stories) 
 - [Design](#Design)
 - [Functionality](#Functionality)
 - [Testing](#Testing)
 - [Compatibility](#Compatibility)
-- [Bugs and Issues](#Bugs and Issues)
+- [Bugs and Issues](#Bugs-and-Issues)
 - [Screenshots](#Screenshots)
 - [Validation](#Validation)
 - [Usage](#Usage)
 - [Acknowledgments](#Acknowledgments)
 - [Deployment](#Deployment)
-- [Live link for the website](#Live link for the website)
+- [Live link for the website](#Live-link-for-the-website)
 
 # Introduction
 This is a simple responsive Drawing website on canvas built using HTML, CSS,JavaScript. The website allows you to draw any picture or designe using mouse and touch screen. I added color pallet and line width to change the color and the width of your line as desired. besides doodling, I have added some geometric shape buttons such as ( rectangle,circle,triangle,straight line) to help you with your plans. All the shapes reacts with the color pallet and line width to have varios options. Moreover, I added a few more buttons such as ( clear canvas,undo,redo,eraser) to help you fix any mistake during your drawing. As soon as you finished your project you can save it automaticly on your device as a picture. Another feature I added was uplouding a picture to edit it if required.
 
-![](assets/image/webpage.png)
-User Story: Drawing and Image Amendment Web Application
 
-## User stories
+## User Stories
 I want to use a web application that allows me to draw and make amendments to images,
 So that I can express my creativity and edit images conveniently.
 
@@ -78,10 +76,29 @@ When I click the "Help" button,
 Then I should be presented with a window or dialog box containing instructions, tips, and information on how to use the various tools and features of the application, providing me with guidance and support during my creative process.
 
 
-
 ## Design
-This is  a picture of the website showing the full canvas with the tools bar. The tool bar was positioned in the center bottom of the page as belived would more comfortable or user to be in that posotion.
-I used picturse instead of texts to discribe each buttns function. The icons (Trash, undo,redo, eraser, pencil, save) were used from w3school and set the colors acording my prefrance as showen in the screenshot https://www.w3schools.com/icons/ . However, I found it mor e appropreat to use css for icons(square,cercle,triangle) and I used How to -CSS shape https://www.w3schools.com/howto/howto_css_shapes.asp as shown in the link.
+The design of the web application focuses on providing a user-friendly and intuitive interface that allows them to express their creativity and conveniently edit images. 
+Here are the key design aspects of the web app:
+
+1. Responsiveness and Layout of the web app: The web is designed with a responsive layout to adapt to different screen sizes and devices. This aspect provides users with a variety of options to access the app from  desktop computers, tablets, and smartphones.
+
+2. Canvas features : The core functionality of the web app revolves around a canvas element. This canvas serves as a virtual drawing board where users can freely create their artwork using a mouse or touch screen. The canvas is designed to be interactive and responsive, providing a smooth drawing experience.
+
+3. Color Palette and Line Width: To enhance the drawing capabilities, the web app incorporates a color palette and line width options. Users can select any color from a range of choices, to add vibrancy and variety to their artwork. Moreover, the line width provides control over the thickness of strokes.
+
+4. Shapes: The web app provides buttons for some geometric shapes, such as rectangles, circles, triangles, and straight lines. These shape buttons enable users to incorporate structured elements into their designs effortlessly. Each shape is dynamically linked to the selected color from the palette and adapts to the chosen line width, offering versatility and creative possibilities.
+
+5. Extra Drawing Tools: The web app provides other drawing tools such as clear the canvas, undo and redo actions, and an eraser for precise edits to assist users. These features enable users to correct mistakes, refine their artwork, and experiment with different ideas effectively.
+
+6. Uploading Image and Editing: The web app offers the capability to edit images by uploading the desired image to the canvas using the upload button.
+
+7. Save Button: After compliting the project you can save the canvas as image in your device aoutomaticly by clicking on the save button.
+
+
+
+
+<!-- This is  a picture of the website showing the full canvas with the tools bar. The tool bar was positioned in the center bottom of the page as belived would more comfortable or user to be in that posotion.
+I used picturse instead of texts to discribe each buttns function. The icons (Trash, undo,redo, eraser, pencil, save) were used from w3school and set the colors acording my prefrance as showen in the screenshot https://www.w3schools.com/icons/ . However, I found it mor e appropreat to use css for icons(square,cercle,triangle) and I used How to -CSS shape https://www.w3schools.com/howto/howto_css_shapes.asp as shown in the link. -->
 
 ## Wireframe
 Design for the desktop screen.
