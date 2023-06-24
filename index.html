@@ -8,6 +8,8 @@
     <!-- importing from css file -->
     <link rel="stylesheet" href="assets/css/canvas.css">
     <!--importing css from font awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BMCanvas</title>
 </head>
@@ -21,21 +23,21 @@
     <div class="tools-container">
       <div class="tools">
         <button id="clear_all" title="Clear all">
-          <i class="fa fa-trash" style="font-size:24px;color: rgb(105, 105, 174);" alt="trash"></i>
+          <i class="fa fa-trash" style="font-size:24px;color: rgb(105, 105, 174);"></i>
         </button>
         <button id="undo" title="Undo">
       
-          <i class="fa fa-rotate-left" style="font-size:24px; color: rgb(34, 151, 100);" alt="undo"></i>
+          <i class="fa fa-rotate-left" style="font-size:24px; color: rgb(34, 151, 100);"></i>
         </button>
         <button id="redo" title="Redo">
-          <i class="fa fa-rotate-right"  style="font-size:24px; color: rgb(105, 105, 174);" alt="redo"></i>
+          <i class="fa fa-rotate-right"  style="font-size:24px; color: rgb(105, 105, 174);"></i>
         </button>
         <button id="Eraser" title="Eraser">
-          <i class="fa fa-eraser" style="font-size:24px; color: rgb(192, 138, 63);" alt="eraser"></i>
+          <i class="fa fa-eraser" style="font-size:24px; color: rgb(192, 138, 63);" ></i>
         </button>
 
         <button id="pencil" title="Pencil">
-          <i class="fa fa-pencil" style="font-size:24px; color:rgb(112, 88, 43)" alt="pencil"></i>
+          <i class="fa fa-pencil" style="font-size:24px; color:rgb(112, 88, 43)"></i>
         </button>
         <div title="Square">
           <div class="square" id="draw_square">
@@ -46,30 +48,29 @@
           </div>
         </div>
         <div title="Triangle">
-          <div class="triangle" id="draw_triangle">
-          </div>
+          <button class="triangle-button" id="draw_triangle">
+            <i class="fa fa-caret-up"></i>
+          </button>     
         </div>
         <button id="draw_line" title="Straight line">
-          <img src="assets/image/straightLine.png" width="24px" hight="24px" alt="straight_line">
+          <!-- <img src="assets/image/straightLine.png" alt="straight_line"> -->
+          <i class="fas fa-minus diagonal-line" style="font-size: 30px;"></i>
         </button>
         <input type="color" id="color-picker" title="Pick color">
         <input type="number" id="line_width"  min="1" max="61" step="5" value="3" title="Line width">
-        <button id="saveImage" title="Save image">
-          <!-- <label for="save"></label> -->
-          <a href id="save" download="canvas.png" target="_blank">
-            Save
-            <i class="fa fa-save" style="font-size:24px"></i>  
-          </a>
-        </button>
-        <button title="Upload image">
-          <label for="snap"></label>
-          <input type="file" id="snap" accept="image/*;capture=camera" title>
-        </button>
-      <button id="help" title="Help window">
-        Help
+        <div id="saveImage" title="Save image">
+          <i class="fa fa-save" style="font-size:24px"></i>
+        </div>
+        <div  title="Upload image" class="upload-container">
+          <label for="imageInput" class="upload-button">Upload</label>
+          <input type="file" id="imageInput" accept="image/*">
+        </div>
+        
+        <button id="help" title="Help window">
+          Help
 
-      </button>
-
+        </button>
+   
       </div>
     </div>
       

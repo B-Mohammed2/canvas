@@ -43,6 +43,10 @@ The website was tested on (Chrome,Safari,Microsoft Edge ) and works perfectly on
 | 6      | Verify that straight line button works| draw a stright line| test Passed| N/A          |  |
 | 7        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          |  |
 
+### problems and bugs
+1. Eraser: When I tried to set the eraser on drawing white line it faild as it was showing as white line after saving.Therefor, I used (globalCompositeOperation = "destination-out") from w3school website.
+2. ImagePointer: it is for saving the canvas as image with every mouse up. when the mouse coming out from the canvas was counted as a mouse up as well. Therefore I added if condition of (painting == true) for convert canvas to image function.
+
 ## screenshots
 
 ![](assets/image/doodle.png)
@@ -59,6 +63,11 @@ The website was tested on (Chrome,Safari,Microsoft Edge ) and works perfectly on
  ![](assets/image/screenshot/jslint1.png)
 ![](assets/image/screenshot/jslint2.png)
 
+#### html validator
+
+## Tools has been used
+#### code beautyfier
+https://beautifier.io
 
 ## Who can use it
 The Website was created to be as simple as it can be to serve the maximum amount of users and the recomended age is 4+.

@@ -165,8 +165,8 @@ window.addEventListener("load", () => {
 
     }
     // getting the chosen image from device and puting it on the canvas.
-    var snap = document.getElementById("snap");
-    snap.onchange = function(e) {
+    var imageInput = document.getElementById("imageInput");
+    imageInput.onchange = function(e) {
         var url = URL.createObjectURL(e.target.files[0]);
         var img = new Image();
         img.onload = function() {
@@ -442,10 +442,17 @@ window.addEventListener("load", () => {
 
 });
 // Save button
-saveButton = document.getElementById("save");
-save.onclick = function(e) {
+// Get a reference to the save button
+saveButton = document.getElementById("saveImage");
+saveButton.onclick = function(e) {
+    // Get the data URL of the canvas
     dataUrl = canvas.toDataURL('image/png');
-    save.href = dataUrl;
+    // Create a temporary link element
+    var link = document.createElement("a");
+    link.href = dataUrl;
+    link.download = "canvas.png"; // Set the desired file name
+    // Programmatically trigger the download
+    link.click();
 };
 
 // Help button window
