@@ -8,8 +8,7 @@
     <!-- importing from css file -->
     <link rel="stylesheet" href="assets/css/canvas.css">
     <!--importing css from font awsome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BMCanvas</title>
 </head>
@@ -57,16 +56,17 @@
           <i class="fas fa-minus diagonal-line" style="font-size: 30px;"></i>
         </button>
         <input type="color" id="color-picker" title="Pick color">
-        <input type="number" id="line_width"  min="1" max="61" step="5" value="3" title="Line width">
+        <input type="range" id="line_width"  min="1" max="61" step="3" value="3" title="Line width">
+        <span id="line_width_value">3</span>
         <div id="saveImage" title="Save image">
-          <i class="fa fa-save" style="font-size:24px"></i>
+          <i class="fa fa-save" style="font-size:24px;color:#B7566D"></i>
         </div>
         <div  title="Upload image" class="upload-container">
           <label for="imageInput" class="upload-button">Upload</label>
           <input type="file" id="imageInput" accept="image/*">
         </div>
         
-        <button id="help" title="Help window">
+        <button id="help" title="Help window" class="help-button">
           Help
 
         </button>

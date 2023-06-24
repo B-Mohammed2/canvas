@@ -156,29 +156,6 @@ img{
     height: 24px;
 }
 
-.upload-container {
-    position: relative;
-    display: inline-block;
-}
-  
-.upload-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3px 10px;
-    height: 30px;
-    background-color: #276d29;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-}
-  
-/* Hide the file input element */
-#imageInput {
-    display: none;
-}
-
 .triangle-button {
     width: 30px;
     height: 30px;
@@ -203,7 +180,109 @@ img{
     border-width: 0 15px 25.98px 15px;
     border-color: transparent transparent rgba(60, 103, 46, 0.534)transparent;
 }
-  
-    
-  
 
+.upload-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.upload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    height: 30px;
+    background-color: #276d29;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+  
+/* Hide the file input element */
+#imageInput {
+    display: none;
+}
+  
+.help-button {
+    padding: 7.5px 10px;
+    background-color: #B7566D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.help-button:hover {
+    background-color: #D3B1C2;
+}
+/* range design from chat gpt used color pallet from canvas for color choice */
+input[type="range"] {
+    /* Remove default track styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    /* Track */
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    /* Thumb */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    /* Thumb hover */
+    background-color: #555;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:active {
+    /* Thumb active */
+    background-color: #777;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    /* Firefox thumb */
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    /* Firefox thumb hover */
+    background-color: #555;
+  }
+  
+  input[type="range"]::-moz-range-thumb:active {
+    /* Firefox thumb active */
+    background-color: #777;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    /* Track fill color */
+    background-color: #FDD55E;
+  }
+  
+  input[type="range"]::-moz-range-track {
+    /* Firefox track fill color */
+    background-color: #66bb6a;
+  }
+  

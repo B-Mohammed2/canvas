@@ -158,6 +158,13 @@ window.addEventListener("load", () => {
     function lSize() {
         linesize = document.getElementById("line_width").value
     }
+    var lineWidthInput = document.getElementById("line_width");
+    var lineWidthValue = document.getElementById("line_width_value");
+
+    lineWidthInput.addEventListener("input", function() {
+    lineWidthValue.textContent = lineWidthInput.value;
+    });
+
     //changing color
     function lineColor() {
         lineCol = document.getElementById("color-picker")
