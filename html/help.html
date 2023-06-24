@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/canvas.css">
+    <link rel="stylesheet" href="../assets/css/canvas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BMCanvas</title>
 </head>
@@ -33,22 +34,36 @@
             <div class="circle" id="btn4"> </div> This button is to draw cercle.
         </li>
         <li>
-            <div class="triangle" id="btn5"> </div> This button is to draw triangle.
+            <div title="Triangle">
+                <button class="triangle-button" id="draw_triangle">
+                  <i class="fa fa-caret-up"></i>
+                </button>     
+              </div> This button is to draw triangle.
         </li>
         <li>
-            <img src="assets/image/straightLine.png" alt="straight_line"> This button is to draw straight lines.
+            <button id="draw_line" title="Straight line">
+                <i class="fas fa-minus diagonal-line" style="font-size: 30px;"></i>
+            </button> This button is to draw straight lines.
         </li>
         <li>
             <input type="color" id="color-picker"> This input is to chose the color for doodling and drawing all the shapes.
         </li>
         <li>
-            <input type="number" id="line_width"  min="1" max="61" step="5"> This input is to chose the width of drawing lines(minmum=1px and maximum=61).The numbers could be entered manually or using the arrows that increas or decreas 5 with each click.
+            <input type="range" id="line_width"  min="1" max="61" step="3" value="3" title="Line width">
+            <span id="line_width_value">3</span>
+            This range input is to chose the width of drawing lines(minmum=1px and maximum=61).The numbers shows next indecates the size by pexil.
         </li>
         <li>
-            <i class="fa fa-save" style="font-size:24px"></i> This button is to save the canvas as an image in your device.
+            <div id="saveImage" title="Save image">
+                <i class="fa fa-save" style="font-size:24px;color:#B7566D"></i>
+            </div>
+               This button is to save the canvas as an image in your device.
         </li>
         <li>
-            <img src="assets/image/upload_image.png" alt="upload image button">This button is to upload image from your devise to the canvase(the defult size setting for uploading is the image original size.)
+            <div  title="Upload image" class="upload-container">
+                <label for="imageInput" class="upload-button">Upload</label>
+                <input type="file" id="imageInput" accept="image/*">
+            </div>This button is to upload image from your devise to the canvase(the defult size setting for uploading is the image original size.)
         </li>
     </ul>
 </body>
