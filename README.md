@@ -2,6 +2,7 @@
 - [Introduction](#introduction)
 - [User Stories](#user-stories) 
 - [Design](#Design)
+- [Wireframe](#Wireframe)
 - [Functionality](#Functionality)
 - [Testing](#Testing)
 - [Compatibility](#Compatibility)
@@ -98,6 +99,10 @@ Design for the tablet and iPad screen.
 ![](assets/image/screenshot/wireframe/wireframe-tablet.png)
 Design for the smartphone screen devices.
 ![](assets/image/screenshot/wireframe/wireframe-smartphone.png)
+
+# Functionality
+
+
 
 ## Where it works
 
