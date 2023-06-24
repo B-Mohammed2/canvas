@@ -453,7 +453,6 @@ window.addEventListener("load", () => {
     saveButton = document.getElementById("saveImage");
     saveButton.onclick = function(e) {
     // Get the data URL of the canvas
-    // dataUrl = canvas.toDataURL('image/png');
     dataUrl = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     // Create a temporary link element
     var link = document.createElement("a");
@@ -462,17 +461,6 @@ window.addEventListener("load", () => {
     // Programmatically trigger the download
     link.click();
 };
-// Setup download button event listener
-//     document.querySelector('#download').addEventListener('click', ()=> {
-//     var canvas = document.querySelector("#myCanvas");
-    
-//     var element = document.createElement('a');
-//     var filename = 'test.png';
-//     element.setAttribute('href', image);
-//     element.setAttribute('download', filename);
-  
-//     element.click();
-//   })
 
 // Help button window
 popupBtn = document.getElementById("help");
