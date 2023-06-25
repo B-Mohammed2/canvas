@@ -158,7 +158,9 @@ The web app was tested on different devices such as laptop,smart phone,ipad.
 
 
 ### Google chrome Developer Tools testing
-|  |   |   |   |
+|![](assets/image/screenshot/res-test/google1.png)| ![](assets/image/screenshot/res-test/google2.png)| ![](assets/image/screenshot/res-test/google3.png)  |
+| :-------------: | :--------------: | :------------: |:------------: |
+
 ### tests with mouse
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | 
