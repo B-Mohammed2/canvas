@@ -220,14 +220,14 @@ the website is not very different from other common canvas apps or programs. you
 
 I would like to express my sincere gratitude and acknowledge the following resources for their valuable contributions to this project:
 
-- **Flaticon** (https://www.flaticon.com) and **Font Awesome** (https://fontawesome.com): I extend my special thanks to Flaticon and Font Awesome for providing an extensive collection of high-quality icons used in the toolbar of our application. These icons have greatly enhanced the visual appeal and functionality of the project.
+- [**Flaticon**](https://www.flaticon.com) and [**Font Awesome**](https://fontawesome.com): I extend my special thanks to Flaticon and Font Awesome for providing an extensive collection of high-quality icons used in the toolbar of our application. These icons have greatly enhanced the visual appeal and functionality of the project.
 
 - **OpenAI's ChatGPT**: I would like to express our deep appreciation to OpenAI's ChatGPT for providing invaluable assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
 
 - [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): I would like to acknowledge the Mozilla Developer Network (MDN) for its comprehensive and reliable documentation on JavaScript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of JavaScript effectively.
 
-- [**W3Schools**] (https://www.w3schools.com): I express my appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing me with practical examples and guidance on various web development topics, including HTML, CSS, and JavaScript.
-- **draw.io**: Thanks to this website drawing the wireframe was easier and more professional.
+- [**W3Schools**](https://www.w3schools.com): I express my appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing me with practical examples and guidance on various web development topics, including HTML, CSS, and JavaScript.
+- [**draw.io**](https://app.diagrams.net) : Thanks to this website drawing the wireframe was easier and more professional.
 
 I'm grateful for the contributions of these resources, which have significantly enriched this project and helped in achieving my goals.
 
