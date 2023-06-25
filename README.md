@@ -155,6 +155,10 @@ The web app was tested on different devices such as laptop,smart phone,ipad.
 | 3 | Rotation | ipad| Passed the test|
 | 4 | Responsiveness | smartphone | Passed the test|
 | 5 | Rotation | smartphone | Passed the test|
+**Screenshots og the test**
+|Laptop|    |   |
+|iPad|![](assets/image/screenshot/res-test/ipad.jpg)|![](assets/image/screenshot/res-test/ipad2.jpg)|
+|smartphone|![](assets/image/screenshot/res-test/smartphone.jpg)|![](assets/image/screenshot/res-test/smartphone2.PNG)|
 
 
 
