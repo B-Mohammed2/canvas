@@ -12,10 +12,13 @@
 - [Usage](#Usage)
 - [Acknowledgments](#Acknowledgments)
 - [Deployment](#Deployment)
-- [Live link for the website](#Live-link-for-the-website)
+- [Live link for the web app](#Live-link-for-the-web-app)
 
 ## Introduction
 This is a simple responsive Drawing website on Canvas built using HTML, CSS, and JavaScript. The website allows you to draw any picture or design using a mouse and touch screen. I added a color pallet and line width to change the color and the width of your line as desired. besides doodling, I have added some geometric shape buttons such as ( rectangles, circles, triangles, and straight lines) to help you with your plans. All the shapes react with the color pallet and line width to have various options. Moreover, I have added a few more buttons such as ( clear canvas, undo, redo and eraser) to help you fix any mistakes during your drawing. Once you have finished your project you can save it automatically on your device as a picture.
+
+## Who can use it
+The Website was created to be as simple as it can be to serve the maximum amount of users and the recommended age is 4+.
 
 
 ## User Stories
@@ -61,7 +64,7 @@ Then I should be able to adjust the thickness of lines and shapes on the canvas,
 
 Scenario 8: Saving Images
 Given that I am on the canvas page,
-when I click on the "Save Image" button,
+When I click on the "Save Image" button,
 The current canvas image should be saved to a file format of my choice (such as PNG or JPEG), to allow me to download and share my artwork.
 
 Scenario 9: Uploading Images
@@ -75,8 +78,9 @@ when I click on the "Help" button,
 I should be introduced to instructions in a window or dialog box. Moreover, it should contain tips, and information on how to use the various tools and features of the application, providing me with guidance and support during my creative process.
 
 
-## Design
-This web application was designed to provide a smooth and simple interface that allows the user to express their creativity and appropriately edit images. 
+## Design 
+The website  you have all the canvas to draw on and buttons that their appearance describes its function to be used to make your drawing easier.
+This web application is not very different from other common canvas apps or programs. It was designed to provide a smooth and simple interface that allows the user to express their creativity and appropriately edit images. 
 
 1. Responsiveness and Layout of the web app: The web is designed with a responsive layout to adapt to different screen sizes and devices. This aspect provides users with a variety of options to access the app from desktop computers, tablets, and smartphones.
 
@@ -161,7 +165,12 @@ The web app was tested on different devices such as laptop,smart phone,ipad.
 |![](assets/image/screenshot/res-test/google1.png)| ![](assets/image/screenshot/res-test/google2.png)| ![](assets/image/screenshot/res-test/google3.png)  |
 | :-------------: | :--------------: | :------------: |
 
-### tests with mouse
+### Responsive Design Testing Tools
+[Am I Responsive?](https://ui.dev/amiresponsive?url=https://b-mohammed2.github.io/canvas/)
+
+![](assets/image/screenshot/res-test/am-i-resp.png)
+
+### Tests with mouse
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | 
 | 1         | Verify that link works | The website opens| test Passed| N/A         |  
@@ -181,25 +190,26 @@ The web app was tested on different devices such as laptop,smart phone,ipad.
 | 15       | Verify that save button works | save the image in the device| test Passed| N/A          |  
 | 16       | Verify that uploading button works | uploads an image in to the canvas| test Passed| N/A          |  
 
-## tests with touch screen
+## Tests with touch screen
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action| Screenshot of the test|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | :-------------------: | 
-| 1        | Verify that  draws with tuchscreen| drawing on the canvas| test Passed| N/A          |  |
+| 1        | Verify that  draws with tuchscreen| drawing on the canvas| test Passed| N/A  | ![](assets/image/screenshot/test-screenshot/doodle.png) |
 | 2       | Verify that pencil button change to doodle again | draw on the canvas| test Passed| N/A          |  |
-| 3       | Verify that rectangle button works | draw a rectangle on the canvas| test Passed| N/A          |  |
-| 4       | Verify that cercle button works | draw a cercle on the canvas| test Passed| N/A          |  |
-| 5       | Verify that triangle button works | draw a triangle on canvas| test Passed| N/A          |  |
-| 6      | Verify that straight line button works| draw a stright line| test Passed| N/A          |  |
-| 7        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          |  |
+| 3       | Verify that rectangle button works | draw a rectangle on the canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/rect.png) |
+| 4       | Verify that cercle button works | draw a cercle on the canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/circle.png) |
+| 5       | Verify that triangle button works | draw a triangle on canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/triangle.png) |
+| 6      | Verify that straight line button works| draw a stright line| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/straight-line.png) |
+| 7        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/eraser.png) |
 
 
 ## Compatibility
 
-The website was tested on (Chrome, Safari, and Microsoft Edge ) and works perfectly on tablet and mobile phone devices and it is responsive. However, it is recommended to be used on a big screen due to the nature of the website that needs space on the screen to do your drawing on it.
+The website was tested on (Chrome, Safari, and Microsoft Edge ) and works perfectly on tablet and mobile phone devices.
+It passed all tests included rotation and responsiveness. However, it is recommended to be used on a big screen due to the nature of the website that needs space on the screen to do your drawing on it.
 
 ## Bugs and Issues
 1. Eraser: When I tried to set the eraser on the drawing white line it failed as it was showing as a white line after saving. Therefore, I used (globalCompositeOperation = "destination-out") from W3school website.
-2. ImagePointer: it is for saving the canvas as an image with every mouse up. when the mouse coming out from the canvas was counted as a mouse up as well. Therefore I added if condition of (painting == true) to convert canvas to image function.
+2. Image Pointer: it is for saving the canvas as an image with every mouse up action. when the mouse coming out from the canvas was counted as a mouse up action as well. this had effect on Undo button. Therefore, I added if condition of (painting == true) to convert canvas to image function and now undo button is working properly.
 
 ## screenshots
 
@@ -211,11 +221,8 @@ The website was tested on (Chrome, Safari, and Microsoft Edge ) and works perfec
 
 
 
-## Who can use it
-The Website was created to be as simple as it can be to serve the maximum amount of users and the recommended age is 4+.
 
-## How it works
-the website is not very different from other common canvas apps or programs. you have all the canvas to draw on and buttons that their appearance describes its function to be used to make your drawing easier.
+
 
 
 ## Acknowledgments
@@ -230,14 +237,14 @@ I would like to express my sincere gratitude and acknowledge the following resou
 
 - [**W3Schools**](https://www.w3schools.com): I express my appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing me with practical examples and guidance on various web development topics, including HTML, CSS, and JavaScript.
 - [**draw.io**](https://app.diagrams.net) : Thanks to this website drawing the wireframe was easier and more professional.
+- [**Grammerly**](https://www.grammarly.com/spell-checker): Thanks to this website I was able to fix any spelling error for readme file.
 
 I'm grateful for the contributions of these resources, which have significantly enriched this project and helped in achieving my goals.
-
 
 ##  How to deploy
 I deploy the website according to the steps in this link:
 https://docs.github.com/en/pages/quickstart#
 
-# Live link for the website
+# Live link for the web app
 
 https://b-mohammed2.github.io/canvas/
