@@ -116,22 +116,33 @@ From the begining of the project tests has been carried out step by step with th
 ## Automated testing
 
 ### Lighthouse test
-The web app was tested on Lighthouse for categories performance,accessibility,bestpractices,SEO(search Engine Optimization) for Mobile devices and Desktop. this is the report as in the image.
+The web app was tested on Lighthouse for categories performance,accessibility,bestpractices,SEO(search Engine Optimization) for Mobile devices and Desktop. 
+This is the report as in the images:
 #### Desktop
 ![](assets/image/screenshot/validator/lighthouse-desk.png)
 #### Mobile 
 ![](assets/image/screenshot/validator/lighthouse-mob.png)
 
 ### Validation test
+The codes has been tested using those tools:
 #### jslint 
  This is the link to the validator webpage https://www.jslint.com. As shown in the screenshot there are no errors. however, there are 37 warnings. They are mostly to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these changes it costs the program to crash. Another reason for not correcting is that the program is running properly and have no problem.
  ![](assets/image/screenshot/jslint1.png)
 ![](assets/image/screenshot/jslint2.png)
 #### JS hint 
-No error detected https://jshint.com.
+ This is another Javascript code validator https://jshint.com to support my project.
+Result: the same as jslint only warnings and no error detected. this is the image of the result
+![](assets/image/screenshot/validator/jshint.png)
 
 #### html validator
-
+The HTML codes for index.html and help.html were tested via w3c validator. There were no error detected.This is the link to the validator webpage https://validator.w3.org. 
+![](assets/image/screenshot/validator/validate-index.png)
+![](assets/image/screenshot/validator/validate-help.png)
+#### CSS validator
+The CSS codes for canvas.css was tested via jigsaw validator.
+Result: there were no errors detected.
+This is the link to the validator webpagehttps://jigsaw.w3.org/css-validator/validator
+![](assets/image/screenshot/validator/validate-css.png)
 ## Manual testing
 
 ### tests with mouse
