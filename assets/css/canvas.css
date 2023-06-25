@@ -219,7 +219,9 @@ img{
 .help-button:hover {
     background-color: #D3B1C2;
 }
-/* range design from chat gpt used color pallet from canvas for color choice */
+/* range design copied from chat gpt 
+used color pallet from canvas for color choice
+resized to fit the the other buttons */
 input[type="range"] {
     /* Remove default track styling */
     -webkit-appearance: none;
