@@ -150,7 +150,7 @@ The responsiveness of the web app was tested Manually and on google chrome devel
 The web app was tested on different devices such as laptop,smart phone,ipad.
 | Test Case | Test & Procedure| Device |  Outcome |Screenshots|
 | :-------: | :-------------: | :--------------: | :------------: |:------------: |
-| 1 | Responsiveness | Laptop | Passed the test|![](assets/image/screenshot/res-test/laptop.png =300x200)|
+| 1 | Responsiveness | Laptop | Passed the test|![](assets/image/screenshot/res-test/laptop.png)|
 | 2 | Responsiveness | iPad | Passed the test|![](assets/image/screenshot/res-test/ipad2.jpg)|
 | 3 | Rotation | ipad| Passed the test|![](assets/image/screenshot/res-test/ipad.jpg)|
 | 4 | Responsiveness | smartphone | Passed the test|![](assets/image/screenshot/res-test/smartphone2.PNG)|
