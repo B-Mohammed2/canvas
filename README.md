@@ -150,7 +150,7 @@ The responsiveness of the web app was tested Manually and on google chrome devel
 The web app was tested on different devices such as laptop,smart phone,ipad.
 | Test Case | Test & Procedure| Device |  Outcome |Screenshots|
 | :-------: | :-------------: | :--------------: | :------------: |:------------: |
-| 1 | Responsiveness | Laptop | Passed the test|      |
+| 1 | Responsiveness | Laptop | Passed the test|![](assets/image/screenshot/res-test/laptop.png =300x200)|
 | 2 | Responsiveness | iPad | Passed the test|![](assets/image/screenshot/res-test/ipad2.jpg)|
 | 3 | Rotation | ipad| Passed the test|![](assets/image/screenshot/res-test/ipad.jpg)|
 | 4 | Responsiveness | smartphone | Passed the test|![](assets/image/screenshot/res-test/smartphone2.PNG)|
@@ -158,7 +158,7 @@ The web app was tested on different devices such as laptop,smart phone,ipad.
 
 
 ### Google chrome Developer Tools testing
-
+|  |   |   |   |
 ### tests with mouse
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | 
@@ -222,7 +222,7 @@ I would like to express my sincere gratitude and acknowledge the following resou
 
 - [**Flaticon**](https://www.flaticon.com) and [**Font Awesome**](https://fontawesome.com): I extend my special thanks to Flaticon and Font Awesome for providing an extensive collection of high-quality icons used in the toolbar of our application. These icons have greatly enhanced the visual appeal and functionality of the project.
 
-- **OpenAI's ChatGPT**: I would like to express our deep appreciation to OpenAI's ChatGPT for providing invaluable assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
+- [**OpenAI's ChatGPT**](https://chat.openai.com): I would like to express our deep appreciation to OpenAI's ChatGPT for providing invaluable assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
 
 - [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): I would like to acknowledge the Mozilla Developer Network (MDN) for its comprehensive and reliable documentation on JavaScript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of JavaScript effectively.
 
