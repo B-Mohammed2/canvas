@@ -148,18 +148,13 @@ This is the link to the validator webpagehttps://jigsaw.w3.org/css-validator/val
 The responsiveness of the web app was tested Manually and on google chrome developer tools responsiveness testing.
 ### Manual testing
 The web app was tested on different devices such as laptop,smart phone,ipad.
-| Test Case | Test & Procedure| Device |  Outcome |
-| :-------: | :-------------: | :--------------: | :------------: |
-| 1 | Responsiveness | Laptop | Passed the test|
-| 2 | Responsiveness | iPad | Passed the test|
-| 3 | Rotation | ipad| Passed the test|
-| 4 | Responsiveness | smartphone | Passed the test|
-| 5 | Rotation | smartphone | Passed the test|
-**Screenshots og the test**
-|Laptop|    |   |
-|iPad|![](assets/image/screenshot/res-test/ipad.jpg)|![](assets/image/screenshot/res-test/ipad2.jpg)|
-|smartphone|![](assets/image/screenshot/res-test/smartphone.jpg)|![](assets/image/screenshot/res-test/smartphone2.PNG)|
-
+| Test Case | Test & Procedure| Device |  Outcome |Screenshots|
+| :-------: | :-------------: | :--------------: | :------------: |:------------: |
+| 1 | Responsiveness | Laptop | Passed the test|      |
+| 2 | Responsiveness | iPad | Passed the test|![](assets/image/screenshot/res-test/ipad2.jpg)|
+| 3 | Rotation | ipad| Passed the test|![](assets/image/screenshot/res-test/ipad.jpg)|
+| 4 | Responsiveness | smartphone | Passed the test|![](assets/image/screenshot/res-test/smartphone2.PNG)|
+| 5 | Rotation | smartphone | Passed the test|![](assets/image/screenshot/res-test/smartphone.jpg)|
 
 
 ### Google chrome Developer Tools testing
