@@ -154,7 +154,7 @@ window.addEventListener("load", () => {
     function choseSline() {
         chosenDraw = "Sline";
     }
-    //sizing text
+    //sizing lines 
     function lSize() {
         linesize = document.getElementById("line_width").value;
     }

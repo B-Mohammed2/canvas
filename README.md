@@ -91,7 +91,7 @@ I should be introduced to instructions in a window or dialog box. Moreover, it s
 The website  you have all the canvas to draw on and buttons that their appearance describes its function to be used to make your drawing easier.
 This web application is not very different from other common canvas apps or programs. It was designed to provide a smooth and simple interface that allows the user to express their creativity and appropriately edit images. 
 
-1. Responsiveness and Layout of the web app: The web is designed with a responsive layout to adapt to different screen sizes and devices. This aspect provides users with a variety of options to access the app from desktop computers, tablets, and smartphones.
+1. Responsiveness and Layout of the web app: The web app was designed to be responsive properly to increase the usage abillity in different screen sizes and devices. This aspect provides users with a variety of options to access the app from desktop computers, tablets, and smartphones.
 
 2. Canvas features: The core functionality of the web app revolves around a canvas element. This canvas serves as a virtual drawing board where users can freely create their artwork using a mouse or touch screen. The canvas is designed to be interactive and responsive, providing a smooth drawing experience.
 
@@ -219,15 +219,16 @@ It passed all tests included rotation and responsiveness. However, it is recomme
 ## Bugs and Issues
 1. Eraser: When I tried to set the eraser on the drawing white line it failed as it was showing as a white line after saving. Therefore, I used (globalCompositeOperation = "destination-out") from W3school website.
 2. Image Pointer: it is for saving the canvas as an image with every mouse up action. when the mouse coming out from the canvas was counted as a mouse up action as well. this had effect on Undo button. Therefore, I added if condition of (painting == true) to convert canvas to image function and now undo button is working properly.
+3. The canvas resizing: the canvas was losing drawing when ever trying to resize it. I set the canvas height and width to 2000px to avoid losing any drawing.
 
 
 ## Acknowledgments
 
-I would like to express my sincere gratitude and acknowledge the following resources for their valuable contributions to this project:
+I would like to mention and acknowledge the following resources for their valuable contributions to this project:
 
-- [**Flaticon**](https://www.flaticon.com) and [**Font Awesome**](https://fontawesome.com): I extend my special thanks to Flaticon and Font Awesome for providing an extensive collection of high-quality icons used in the toolbar of our application. These icons have greatly enhanced the visual appeal and functionality of the project.
+- [**Flaticon**](https://www.flaticon.com), [**Font Awesome**](https://fontawesome.com), [**w3school**](https://www.w3schools.com/icons/): I extend my thanks to Flaticon, Font Awesome and w3school for providing high-quality icons used in the toolbar of the application. These icons have improved the visual appeal and functionality of the project.
 
-- [**OpenAI's ChatGPT**](https://chat.openai.com): I would like to express our deep appreciation to OpenAI's ChatGPT for providing invaluable assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
+- [**OpenAI's ChatGPT**](https://chat.openai.com): I would like to express our appreciation to OpenAI's ChatGPT for providing assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
 
 - [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): I would like to acknowledge the Mozilla Developer Network (MDN) for its comprehensive and reliable documentation on JavaScript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of JavaScript effectively.
 
