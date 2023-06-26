@@ -35,7 +35,7 @@ Then I should be able to draw freehand on the canvas using my mouse or touch inp
 Scenario 2: Undo and Redo Actions
 Given that I have drawn something on the canvas,
 When I click on the "Undo" button,
- the last action should be undone and return the canvas to its previous state.
+ the last action should be undone and return the canvas one action back with each click.
 And if I click on the "Redo" button, the undone action should be restored.
 ![](assets/image/screenshot/user-stories/undo.png)
 ![](assets/image/screenshot/user-stories/redo.png)
@@ -151,10 +151,10 @@ Result: the same as jslint only warnings and no error detected. this is the imag
 The HTML codes for index.html and help.html were tested via [w3c validator](https://validator.w3.org).
 ![](assets/image/screenshot/validator/validate-index.png)
 ![](assets/image/screenshot/validator/validate-help.png)
-#### CSS validator
+#### CSS validator [(W3C's CSS Validation Service)](https://jigsaw.w3.org/css-validator/validator)
 The CSS codes for canvas.css was tested via jigsaw validator.
 Result: there were no errors detected.
-This is the link to the validator webpage [W3C's CSS Validation Service](https://jigsaw.w3.org/css-validator/validator)
+
 ![](assets/image/screenshot/validator/validate-css.png)
 
 ## Testing responsiveness
