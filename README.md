@@ -7,7 +7,6 @@
 - [Testing](#Testing)
 - [Compatibility](#Compatibility)
 - [Bugs and Issues](#Bugs-and-Issues)
-- [Screenshots](#Screenshots)
 - [Validation](#Validation)
 - [Usage](#Usage)
 - [Acknowledgments](#Acknowledgments)
@@ -219,19 +218,6 @@ It passed all tests included rotation and responsiveness. However, it is recomme
 ## Bugs and Issues
 1. Eraser: When I tried to set the eraser on the drawing white line it failed as it was showing as a white line after saving. Therefore, I used (globalCompositeOperation = "destination-out") from W3school website.
 2. Image Pointer: it is for saving the canvas as an image with every mouse up action. when the mouse coming out from the canvas was counted as a mouse up action as well. this had effect on Undo button. Therefore, I added if condition of (painting == true) to convert canvas to image function and now undo button is working properly.
-
-## screenshots
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Acknowledgments
