@@ -14,7 +14,7 @@
 - [Live link for the web app](#Live-link-for-the-web-app)
 
 ## Introduction
-This is a simple responsive Drawing website on Canvas built using HTML, CSS, and JavaScript. The website allows you to draw any picture or design using a mouse and touch screen. I added a color pallet and line width to change the color and the width of your line as desired. besides doodling, I have added some geometric shape buttons such as ( rectangles, circles, triangles, and straight lines) to help you with your plans. All the shapes react with the color pallet and line width to have various options. Moreover, I have added a few more buttons such as ( clear canvas, undo, redo and eraser) to help you fix any mistakes during your drawing. Once you have finished your project you can save it automatically on your device as a picture.
+This is a simple responsive Drawing website on Canvas built using HTML, CSS, and JavaScript. The website allows you to draw any picture or design using a mouse and touch screen. I added a color pallet and line width to change the color and the width of your line as desired. besides doodling, I have added some geometric shape buttons such as ( rectangles, circles, triangles, and straight lines) to help you with your plans. All the shapes react with the color pallet and line width to have various options. Additionally, other buttons such as (clear canvas, undo, and redo) were added to assist the user to fix any mistakes during drawing. Once the user finished the work, it can be saved automatically on the device as a picture.
 
 ## Who can use it
 The Website was created to be as simple as it can be to serve the maximum amount of users and the recommended age is 4+.
