@@ -139,11 +139,11 @@ This is the report as in the images:
 ### Validation test
 The codes has been tested using those tools:
 #### [jslint](https://www.jslint.com)
-  As shown in the screenshot there are no errors. however, there are 37 warnings. They are mostly to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these changes it costs the program to crash. Another reason for not correcting is that the program is running properly and have no problem.
- ![](assets/image/screenshot/validator/jslint1.png)
- ![](assets/image/screenshot/validator/jslint2.png)
+As shown in the screenshot there are no errors. however, there are 37 warnings. They are mostly to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these changes it costs the program to crash. Another reason for not correcting is that the program is running properly and have no problem.
+![](assets/image/screenshot/validator/jslint.png)
+
 #### [JS hint](https://jshint.com) 
- This is another Javascript code validator  to support my project.
+This is another Javascript code validator  to support my project.
 Result: the same as jslint only warnings and no error detected. this is the image of the result
 ![](assets/image/screenshot/validator/jshint.png)
 
