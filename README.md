@@ -71,7 +71,7 @@ Then I should be able to adjust the thickness of lines and shapes on the canvas,
 Scenario 8: Saving Images
 Given that I am on the canvas page,
 When I click on the "Save Image" button,
-The finished artwork should be saved as image of format (png, or Jpeg) in the current device, to allow me to download and share my artwork.
+The finished artwork should be saved as an image in format (png, or Jpeg) on the current device, to allow me to download and share my artwork.
 ![](assets/image/screenshot/user-stories/save.png)
 
 Scenario 9: Uploading Images
@@ -88,10 +88,10 @@ I should be introduced to instructions in a window or dialog box. Moreover, it s
 
 
 ## Design 
-The website  you have all the canvas to draw on and buttons that their appearance describes its function to be used to make your drawing easier.
+on the website,  you have all the canvas to draw on and buttons that their appearance describes its function to be used to make your drawing easier.
 This web application is not very different from other common canvas apps or programs. It was designed to provide a smooth and simple interface that allows the user to express their creativity and appropriately edit images. 
 
-1. Responsiveness and Layout of the web app: The web app was designed to be responsive properly to increase the usage abillity in different screen sizes and devices. This aspect provides users with a variety of options to access the app from desktop computers, tablets, and smartphones.
+1. Responsiveness and Layout of the web app: The web app was designed to be responsive to increase the usage ability in different screen sizes and devices. This aspect provides users with a variety of options to access the app from desktop computers, tablets, and smartphones.
 
 2. Canvas features: The core functionality of the web app revolves around a canvas element. This canvas serves as a virtual drawing board where users can freely create their artwork using a mouse or touch screen. The canvas is designed to be interactive and responsive, providing a smooth drawing experience.
 
@@ -119,17 +119,17 @@ This web application offers the user a range of functionality that helps the use
 * Color: Another functionality the web app offers is the color pallet allowing users to choose from a wide range of colors.
 * Line width: users can change the line width of all drawing tools including the eraser to give them more control on the canvas.
 * Drawing geometric shapes: Users can draw geometric shapes easily with the buttons provided in the web app such as (Rectangles, triangles, circles, and straight lines). they can add these shapes to their project by selecting the desired shape and placing it on the canvas. The chosen shapes inherit the selected color and line width to provide consistent design elements.
-* Editing Tools: The web app includes other buttons such as (Clear the canvas, Undo actions, Redo actions, eraser for detailed editing) actions to enhance the user's drawing experience.
+* Editing Tools: The web app includes other buttons such as (Clear the Canvas, Undo actions, Redo actions, and eraser for detailed editing) actions to enhance the user's drawing experience.
 * Uploading image for editing: The web app includes an Upload button to upload images from their device to the canvas for modification and editing. 
 * Saving drawing: When users finished their artwork, this feature allows the user to save the work as an image file on their device and share their creations.
 
 ## Testing
-From the beginning of the project tests has been carried out step by step with the development of the web application. However, after finishing the project I have made further tests and this are the processes:
+From the beginning of the project, tests have been carried out step by step with the development of the web application. However, after finishing the project I made further tests and these are the processes:
 
 ## Automated testing
 
 ### Lighthouse test
-The web app was tested on Lighthouse for categories performance,accessibility,bestpractices,SEO(search Engine Optimization) for Mobile devices and Desktop. 
+The web app was tested on Lighthouse for categories performance, accessibility, best practices, and SEO(Search Engine Optimization) for Mobile devices and Desktops. 
 This is the report as in the images:
 #### Desktop
 ![](assets/image/screenshot/validator/lighthouse-desk.png)
@@ -137,14 +137,14 @@ This is the report as in the images:
 ![](assets/image/screenshot/validator/lighthouse-mob.png)
 
 ### Validation test
-The codes has been tested using those tools:
+The codes have been tested using those tools:
 #### [jslint](https://www.jslint.com)
 As shown in the screenshot there are no errors. however, there are 32 warnings. They are mostly to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these changes it costs the program to crash. Another reason for not correcting is that the program is running properly and have no problem.
 ![](assets/image/screenshot/validator/jslint.png)
 
 #### [JS hint](https://jshint.com) 
-This is another Javascript code validator  to support my project.
-Result: the same as jslint only warnings and no error detected. this is the image of the result
+This is another Javascript code validator to support my project.
+Result: the same as JSLint only warnings and no error detected. this is the image of the result
 ![](assets/image/screenshot/validator/jshint.png)
 
 #### html validator
@@ -152,7 +152,7 @@ The HTML codes for index.html and help.html were tested via [w3c validator](http
 ![](assets/image/screenshot/validator/validate-index.png)
 ![](assets/image/screenshot/validator/validate-help.png)
 #### CSS validator [(W3C's CSS Validation Service)](https://jigsaw.w3.org/css-validator/validator)
-The CSS codes for canvas.css was tested via jigsaw validator.
+The CSS codes for canvas.css file was tested via validators.
 Result: there were no errors detected.
 
 ![](assets/image/screenshot/validator/validate-css.png)
@@ -160,7 +160,7 @@ Result: there were no errors detected.
 ## Testing responsiveness
 The responsiveness of the web app was tested Manually and on google chrome developer tools responsiveness testing.
 ### Manual testing
-The web app was tested on different devices such as laptop,smart phone,ipad.
+The web app was tested on different devices such as laptops, smart phones, ipads.
 | Test Case | Test & Procedure| Device |  Outcome |Screenshots|
 | :-------: | :-------------: | :--------------: | :------------: |:------------: |
 | 1 | Responsiveness | Laptop | Passed the test|![](assets/image/screenshot/res-test/laptop.png)|
