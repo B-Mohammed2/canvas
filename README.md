@@ -84,7 +84,7 @@ Scenario 10: Help and Instructions
 Given that I am on the canvas page,
 when I click on the "Help" button,
 I should be introduced to instructions in a window or dialog box. Moreover, it should contain tips, and information on how to use the various tools and features of the application, providing me with guidance and support during my creative process.
-![](assets/image/screenshot/user-stories/help.png)
+![](assets/image/screenshot/user-stories/help.png =200x400)
 
 
 ## Design 
