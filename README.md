@@ -14,7 +14,7 @@
 - [Live link for the web app](#Live-link-for-the-web-app)
 
 ## Introduction
-This is a simple responsive Drawing website on Canvas built using HTML, CSS, and JavaScript. The website allows you to draw any picture or design using a mouse and touch screen. I added a color pallet and line width to change the color and the width of your line as desired. besides doodling, I have added some geometric shape buttons such as ( rectangles, circles, triangles, and straight lines) to help you with your plans. All the shapes react with the color pallet and line width to have various options. Additionally, other buttons such as (clear canvas, undo, and redo) were added to assist the user to fix any mistakes during drawing. Once the user finished the work, it can be saved automatically on the device as a picture.
+This is a simple responsive Drawing website on Canvas built using HTML, CSS, and Javascript. The website allows you to draw any picture or design using a mouse and touch screen. I added a color pallet and line width to change the color and the width of your line as desired. besides doodling, I have added some geometric shape buttons such as ( rectangles, circles, triangles, and straight lines) to help you with your plans. All the shapes react with the color pallet and line width to have various options. Additionally, other buttons such as (clear canvas, undo, and redo) were added to assist the user to fix any mistakes during drawing. Once the user finished the work, it can be saved automatically on the device as a picture.
 
 ## Who can use it
 The Website was created to be as simple as it can be to serve the maximum amount of users and the recommended age is 4+.
@@ -71,7 +71,7 @@ Then I should be able to adjust the thickness of lines and shapes on the canvas,
 Scenario 8: Saving Images
 Given that I am on the canvas page,
 When I click on the "Save Image" button,
-The finished artwork should be saved as image of format (png, or Jpeg) in the curent device, to allow me to download and share my artwork.
+The finished artwork should be saved as image of format (png, or Jpeg) in the current device, to allow me to download and share my artwork.
 ![](assets/image/screenshot/user-stories/save.png)
 
 Scenario 9: Uploading Images
@@ -124,7 +124,7 @@ This web application offers the user a range of functionality that helps the use
 * Saving drawing: When users finished their artwork, this feature allows the user to save the work as an image file on their device and share their creations.
 
 ## Testing
-From the begining of the project tests has been carried out step by step with the development of the web application. However, after finishing the project I have made further testes and this are the processes:
+From the beginning of the project tests has been carried out step by step with the development of the web application. However, after finishing the project I have made further tests and this are the processes:
 
 ## Automated testing
 
@@ -183,10 +183,10 @@ The web app was tested on different devices such as laptop,smart phone,ipad.
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | 
 | 1         | Verify that link works | The website opens| test Passed| N/A         |  
-| 2         | Verify that draws with mouse| Drawing on anvas| test Passed| N/A     |  
+| 2         | Verify that draws with mouse| Drawing on canvas| test Passed| N/A     |  
 | 3        | Verify that color changes | Color of the line change according to the chosen color| test Passed| N/A          |
 | 4         | Verify that width of line changes | The width of line changes according to the number chosen| test Passed| N/A          |  
-| 5       | Verify that bin button works  | The canvas cleared completly| test Passed| N/A          |  
+| 5       | Verify that bin button works  | The canvas cleared completely| test Passed| N/A          |  
 | 6         | Verify that undo button works | goes back one action| test Passed| N/A          |  
 | 7         | Verify that redo button works | goes forward one action after undo| test Passed| N/A          |  
 | 8        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          |  
@@ -202,12 +202,12 @@ The web app was tested on different devices such as laptop,smart phone,ipad.
 ## Tests with touch screen
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action| Screenshot of the test|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | :-------------------: | 
-| 1        | Verify that  draws with tuchscreen| drawing on the canvas| test Passed| N/A  | ![](assets/image/screenshot/test-screenshot/doodle.png) |
+| 1        | Verify that  draws with touch screen| drawing on the canvas| test Passed| N/A  | ![](assets/image/screenshot/test-screenshot/doodle.png) |
 | 2       | Verify that pencil button change to doodle again | draw on the canvas| test Passed| N/A          |  |
 | 3       | Verify that rectangle button works | draw a rectangle on the canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/rect.png) |
 | 4       | Verify that cercle button works | draw a cercle on the canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/circle.png) |
 | 5       | Verify that triangle button works | draw a triangle on canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/triangle.png) |
-| 6      | Verify that straight line button works| draw a stright line| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/straight-line.png) |
+| 6      | Verify that straight line button works| draw a straight line| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/straight-line.png) |
 | 7        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/eraser.png) |
 
 
@@ -230,9 +230,9 @@ I would like to mention and acknowledge the following resources for their valuab
 
 - [**OpenAI's ChatGPT**](https://chat.openai.com): I would like to express our appreciation to OpenAI's ChatGPT for providing assistance and guidance throughout the development of this project. ChatGPT has been instrumental in answering our questions, providing explanations, and offering solutions, making this project possible.
 
-- [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): I would like to acknowledge the Mozilla Developer Network (MDN) for its comprehensive and reliable documentation on JavaScript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of JavaScript effectively.
+- [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): I would like to acknowledge the Mozilla Developer Network (MDN) for its comprehensive and reliable documentation on Javascript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of Javascript effectively.
 
-- [**W3Schools**](https://www.w3schools.com): I express my appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing me with practical examples and guidance on various web development topics, including HTML, CSS, and JavaScript.
+- [**W3Schools**](https://www.w3schools.com): I express my appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing me with practical examples and guidance on various web development topics, including HTML, CSS, and Javascript.
 - [**draw.io**](https://app.diagrams.net) : Thanks to this website drawing the wireframe was easier and more professional.
 - [**Grammerly**](https://www.grammarly.com/spell-checker): Thanks to this website I was able to fix any spelling error for readme file.
 
