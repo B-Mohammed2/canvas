@@ -213,8 +213,6 @@ window.addEventListener("load", () => {
             dataImage = undoImage[imagePointer];
             clear_canvas();
             redraw();
-            console.log(imagePointer);
-            console.log(undoImage.length);
         }
     }
 
@@ -240,6 +238,7 @@ window.addEventListener("load", () => {
             .innerHeight);
         dataImage = null;
     }
+    // here codes for touch screen starts
     let cX;
     let cY;
 
@@ -324,13 +323,10 @@ window.addEventListener("load", () => {
     function drawTocharc(e) {
         ctx.beginPath();
         ctx.globalCompositeOperation = "source-over";
-        ctx.ellipse(cX, cY, Math.abs(e.changedTouches[0]
-                .clientX -
-                cX), Math.abs(e.changedTouches[0]
-                .clientY - cY),
+        ctx.ellipse(cX, cY, Math.abs(e.changedTouches[0].clientX - cX),
+         Math.abs(e.changedTouches[0].clientY - cY),
             Math.PI / e.changedTouches[0].clientY, 0, 2 *
-            Math
-            .PI);
+            Math.PI);
         clear_canvas();
         if (dataImage != null)
             redraw();
@@ -467,7 +463,7 @@ popupBtn = document.getElementById("help");
 popupBtn.addEventListener('click', Mypopup);
 
 function Mypopup() {
-    var windowFeatures = "left=1000,top=100,width=300,height=600";
+    var windowFeatures = "left=1000,top=100,width=400,height=600";
     window.open(
         "html/help.html",
         "popup",

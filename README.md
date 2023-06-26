@@ -31,21 +31,26 @@ Scenario 1: Drawing on Canvas
 Given that I am on the web application's canvas page,
 When I select the drawing tool,
 Then I should be able to draw freehand on the canvas using my mouse or touch input.
+![](assets/image/screenshot/user-stories/draw-on-canvas.png)
 
 Scenario 2: Undo and Redo Actions
 Given that I have drawn something on the canvas,
 When I click on the "Undo" button, the previous action should be undone and revert the canvas to its previous state.
 And if I click on the "Redo" button, the undone action should be restored, bringing the canvas back to the modified state.
+![](assets/image/screenshot/user-stories/undo.png)
+![](assets/image/screenshot/user-stories/redo.png)
 
 Scenario 3: Erasing
 Given that I am on the canvas page,
 When I select the eraser tool,
 Then I should be able to erase specific parts of the drawing or image on the canvas, providing the ability to correct mistakes or remove unwanted elements.
+![](assets/image/screenshot/user-stories/eraser.png)
 
 Scenario 4: Shape Drawing
 Given that I am on the canvas page,
 When I select any geometric shape from the toolbar such as (a square, circle, or triangle),
 I should be able to draw the selected shape on the canvas by clicking and dragging, allowing me to create geometric shapes effortlessly.
+![](assets/image/screenshot/user-stories/shapes.png)
 
 Scenario 5: Drawing Straight Lines
 Given that I am on the canvas page,
@@ -61,21 +66,25 @@ Scenario 7: Adjusting Line Width
 Given that I am on the canvas page,
 When I use the line width slider,
 Then I should be able to adjust the thickness of lines and shapes on the canvas, allowing me to create drawings with varying line widths and styles.
+![](assets/image/screenshot/user-stories/line-width-color.png)
 
 Scenario 8: Saving Images
 Given that I am on the canvas page,
 When I click on the "Save Image" button,
 The current canvas image should be saved to a file format of my choice (such as PNG or JPEG), to allow me to download and share my artwork.
+![](assets/image/screenshot/user-stories/save.png)
 
 Scenario 9: Uploading Images
 Given that I am on the canvas page,
 When I click the "Upload Image" button,
 I should be able to select an image file from my device and have it displayed on the canvas, to enable me to edit and make amendments to existing images.
+![](assets/image/screenshot/user-stories/upload.png)
 
 Scenario 10: Help and Instructions
 Given that I am on the canvas page,
 when I click on the "Help" button,
 I should be introduced to instructions in a window or dialog box. Moreover, it should contain tips, and information on how to use the various tools and features of the application, providing me with guidance and support during my creative process.
+![](assets/image/screenshot/user-stories/help.png)
 
 
 ## Design 

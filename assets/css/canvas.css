@@ -288,3 +288,10 @@ input[type="range"] {
     background-color: #66bb6a;
   }
   
+  .scrollbar{
+    width: 400px; /* Set the desired width */
+    height: 500px; /* Set the desired height */
+    overflow: auto; /* Enable scrolling */
+    overflow-y:scroll;
+    padding:2px;
+  }
