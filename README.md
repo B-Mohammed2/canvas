@@ -34,8 +34,9 @@ Then I should be able to draw freehand on the canvas using my mouse or touch inp
 
 Scenario 2: Undo and Redo Actions
 Given that I have drawn something on the canvas,
-When I click on the "Undo" button, the previous action should be undone and revert the canvas to its previous state.
-And if I click on the "Redo" button, the undone action should be restored, bringing the canvas back to the modified state.
+When I click on the "Undo" button,
+ the last action should be undone and return the canvas to its previous state.
+And if I click on the "Redo" button, the undone action should be restored.
 ![](assets/image/screenshot/user-stories/undo.png)
 ![](assets/image/screenshot/user-stories/redo.png)
 
@@ -70,7 +71,7 @@ Then I should be able to adjust the thickness of lines and shapes on the canvas,
 Scenario 8: Saving Images
 Given that I am on the canvas page,
 When I click on the "Save Image" button,
-The current canvas image should be saved to a file format of my choice (such as PNG or JPEG), to allow me to download and share my artwork.
+The finished artwork should be saved as image of format (png, or Jpeg) in the curent device, to allow me to download and share my artwork.
 ![](assets/image/screenshot/user-stories/save.png)
 
 Scenario 9: Uploading Images
@@ -137,23 +138,23 @@ This is the report as in the images:
 
 ### Validation test
 The codes has been tested using those tools:
-#### jslint 
- This is the link to the validator webpage https://www.jslint.com. As shown in the screenshot there are no errors. however, there are 37 warnings. They are mostly to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these changes it costs the program to crash. Another reason for not correcting is that the program is running properly and have no problem.
+#### [jslint](https://www.jslint.com)
+  As shown in the screenshot there are no errors. however, there are 37 warnings. They are mostly to do with the structure of the program. I tried to fix them. However, it keeps increasing with any correction and with all these changes it costs the program to crash. Another reason for not correcting is that the program is running properly and have no problem.
  ![](assets/image/screenshot/jslint1.png)
 ![](assets/image/screenshot/jslint2.png)
-#### JS hint 
- This is another Javascript code validator https://jshint.com to support my project.
+#### [JS hint](https://jshint.com) 
+ This is another Javascript code validator  to support my project.
 Result: the same as jslint only warnings and no error detected. this is the image of the result
 ![](assets/image/screenshot/validator/jshint.png)
 
 #### html validator
-The HTML codes for index.html and help.html were tested via w3c validator. There were no error detected.This is the link to the validator webpage https://validator.w3.org. 
+The HTML codes for index.html and help.html were tested via [w3c validator](https://validator.w3.org).
 ![](assets/image/screenshot/validator/validate-index.png)
 ![](assets/image/screenshot/validator/validate-help.png)
 #### CSS validator
 The CSS codes for canvas.css was tested via jigsaw validator.
 Result: there were no errors detected.
-This is the link to the validator webpagehttps://jigsaw.w3.org/css-validator/validator
+This is the link to the validator webpage [W3C's CSS Validation Service](https://jigsaw.w3.org/css-validator/validator)
 ![](assets/image/screenshot/validator/validate-css.png)
 
 ## Testing responsiveness
