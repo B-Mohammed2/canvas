@@ -119,7 +119,7 @@ This web application offers the user a range of functionality that helps the use
 * Color: Another functionality the web app offers is the color pallet allowing users to choose from a wide range of colors.
 * Line width: users can change the line width of all drawing tools including the eraser to give them more control on the canvas.
 * Drawing geometric shapes: Users can draw geometric shapes easily with the buttons provided in the web app such as (Rectangles, triangles, circles, and straight lines). they can add these shapes to their project by selecting the desired shape and placing it on the canvas. The chosen shapes inherit the selected color and line width to provide consistent design elements.
-* Editing Tools: The web app includes other buttons such as (Clear the Canvas, Undo actions, Redo actions, and eraser for detailed editing) actions to enhance the user's drawing experience.
+* Editing Tools: The web app includes other buttons such as (Clear the Canvas, Undo actions, Redo actions, and Eraser for detailed editing) actions to enhance the user's drawing experience.
 * Uploading image for editing: The web app includes an Upload button to upload images from their device to the canvas for modification and editing. 
 * Saving drawing: When users finished their artwork, this feature allows the user to save the work as an image file on their device and share their creations.
 
@@ -152,7 +152,7 @@ The HTML codes for index.html and help.html were tested via [w3c validator](http
 ![](assets/image/screenshot/validator/validate-index.png)
 ![](assets/image/screenshot/validator/validate-help.png)
 #### CSS validator [(W3C's CSS Validation Service)](https://jigsaw.w3.org/css-validator/validator)
-The CSS codes for canvas.css file was tested via validators.
+The CSS codes for the (canvas.css) file were tested via validators.
 Result: there were no errors detected.
 
 ![](assets/image/screenshot/validator/validate-css.png)
@@ -160,7 +160,7 @@ Result: there were no errors detected.
 ## Testing responsiveness
 The responsiveness of the web app was tested Manually and on google chrome developer tools responsiveness testing.
 ### Manual testing
-The web app was tested on different devices such as laptops, smart phones, ipads.
+The web app was tested on different devices such as laptops, smartphones, ipads.
 | Test Case | Test & Procedure| Device |  Outcome |Screenshots|
 | :-------: | :-------------: | :--------------: | :------------: |:------------: |
 | 1 | Responsiveness | Laptop | Passed the test|![](assets/image/screenshot/res-test/laptop.png)|
@@ -170,7 +170,7 @@ The web app was tested on different devices such as laptops, smart phones, ipads
 | 5 | Rotation | smartphone | Passed the test|![](assets/image/screenshot/res-test/smartphone.jpg)|
 
 
-### Google chrome Developer Tools testing
+### Google Chrome Developer Tools testing
 |![](assets/image/screenshot/res-test/google1.png)| ![](assets/image/screenshot/res-test/google2.png)| ![](assets/image/screenshot/res-test/google3.png)  |
 | :-------------: | :--------------: | :------------: |
 
@@ -190,36 +190,36 @@ The web app was tested on different devices such as laptops, smart phones, ipads
 | 6         | Verify that undo button works | goes back one action| test Passed| N/A          |  
 | 7         | Verify that redo button works | goes forward one action after undo| test Passed| N/A          |  
 | 8        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          |  
-| 9         | Verify that the size of the eraser changes with the line width size value | The size of the clearing area changes| test Passed| N/A          |  
-| 10       | Verify that pencil button change to doodle again | draw on the canvas| test Passed| N/A          |  
-| 11       | Verify that rectangle button works | draw rectangle on the canvas| test Passed| N/A          |  
-| 12       | Verify that circle button works | draw circle on the canvas| test Passed| N/A          |  
-| 13       | Verify that triangle button works | draw triangle on canvas| test Passed| N/A          |  
-| 14       | Verify that straight line button works| draw straight line| test Passed| N/A          |  
-| 15       | Verify that save button works | save the image in the device| test Passed| N/A          |  
-| 16       | Verify that uploading button works | uploads an image in to the canvas| test Passed| N/A          |  
+| 9         | Verify that the size of the eraser changes with the line width size value | The size of the clearing area changes| Test Passed| N/A          |  
+| 10       | Verify that pencil button change to doodle again | draw on the canvas| Test Passed| N/A          |  
+| 11       | Verify that rectangle button works | draw rectangle on the canvas| Test Passed| N/A          |  
+| 12       | Verify that circle button works | draw circle on the canvas| Test Passed| N/A          |  
+| 13       | Verify that triangle button works | draw triangle on canvas| Test Passed| N/A          |  
+| 14       | Verify that straight line button works| draw straight line| Test Passed| N/A          |  
+| 15       | Verify that save button works | save the image in the device| Test Passed| N/A          |  
+| 16       | Verify that uploading button works | uploads an image in to the canvas| Test Passed| N/A          |  
 
-## Tests with touch screen
+## Tests with touchscreen
 | Test Case | Test & Procedure| Expected Outcome | Actual outcome | Required action| Screenshot of the test|
 | :-------: | :-------------: | :--------------: | :------------: | :------------: | :-------------------: | 
-| 1        | Verify that  draws with touch screen| drawing on the canvas| test Passed| N/A  | ![](assets/image/screenshot/test-screenshot/doodle.png) |
-| 2       | Verify that pencil button change to doodle again | draw on the canvas| test Passed| N/A          |  |
-| 3       | Verify that rectangle button works | draw a rectangle on the canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/rect.png) |
-| 4       | Verify that cercle button works | draw a cercle on the canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/circle.png) |
-| 5       | Verify that triangle button works | draw a triangle on canvas| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/triangle.png) |
-| 6      | Verify that straight line button works| draw a straight line| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/straight-line.png) |
-| 7        | Verify that eraser button works |erase the spot you clicking on| test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/eraser.png) |
+| 1        | Verify that  draws with touch screen| drawing on the canvas| Test Passed| N/A  | ![](assets/image/screenshot/test-screenshot/doodle.png) |
+| 2       | Verify that pencil button change to doodle again | draw on the canvas| Test Passed| N/A          |  |
+| 3       | Verify that rectangle button works | draw a rectangle on the canvas| Test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/rect.png) |
+| 4       | Verify that cercle button works | draw a cercle on the canvas| Test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/circle.png) |
+| 5       | Verify that triangle button works | draw a triangle on canvas| Test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/triangle.png) |
+| 6      | Verify that straight line button works| draw a straight line| Test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/straight-line.png) |
+| 7        | Verify that eraser button works |erase the spot you clicking on| Test Passed| N/A          | ![](assets/image/screenshot/test-screenshot/eraser.png) |
 
 
 ## Compatibility
 
 The website was tested on (Chrome, Safari, and Microsoft Edge ) and works perfectly on tablet and mobile phone devices.
-It passed all tests included rotation and responsiveness. However, it is recommended to be used on a big screen due to the nature of the website that needs space on the screen to do your drawing on it.
+It passed all tests including rotation and responsiveness. However, it is recommended to be used on a big screen due to the nature of the website that needs space on the screen to do your drawing on it.
 
 ## Bugs and Issues
-1. Eraser: When I tried to set the eraser on the drawing white line it failed as it was showing as a white line after saving. Therefore, I used (globalCompositeOperation = "destination-out") from W3school website.
-2. Image Pointer: it is for saving the canvas as an image with every mouse up action. when the mouse coming out from the canvas was counted as a mouse up action as well. this had effect on Undo button. Therefore, I added if condition of (painting == true) to convert canvas to image function and now undo button is working properly.
-3. The canvas resizing: the canvas was losing drawing when ever trying to resize it. I set the canvas height and width to 2000px to avoid losing any drawing.
+1. Eraser: When I tried to set the eraser on the drawing white line it failed as it was showing as a white line after saving. Therefore, I used (globalCompositeOperation = "destination-out") from the W3school website.
+2. Image Pointer: it is for saving the canvas as an image with every mouse-up action. when the mouse come out from the canvas was counted as a mouse-up action as well. this affected Undo button. Therefore, I added (if) condition of (painting == true) to convert canvas to image function and now undo button is working properly.
+3. The canvas resizing: the canvas was losing drawing whenever trying to resize it. I set the canvas height and width to 2000px to avoid losing any drawing.
 
 
 ## Acknowledgments
@@ -233,7 +233,7 @@ I would like to mention and acknowledge the following resources for their valuab
 - [**Mozilla Developer Network**](https://developer.mozilla.org/en-US/docs/Web/JavaScript): I would like to acknowledge the Mozilla Developer Network (MDN) for its comprehensive and reliable documentation on Javascript. MDN has served as an essential resource, providing in-depth explanations, examples, and references, enabling us to leverage the power of Javascript effectively.
 
 - [**W3Schools**](https://www.w3schools.com): I express my appreciation to W3Schools for their informative and user-friendly tutorials and references. W3Schools has been an invaluable resource, providing me with practical examples and guidance on various web development topics, including HTML, CSS, and Javascript.
-- [**draw.io**](https://app.diagrams.net) : Thanks to this website drawing the wireframe was easier and more professional.
+- [**draw.io**](https://app.diagrams.net): Thanks to this website drawing the wireframe was easier and more professional.
 - [**Grammerly**](https://www.grammarly.com/spell-checker): Thanks to this website I was able to fix any spelling error for readme file.
 
 I'm grateful for the contributions of these resources, which have significantly enriched this project and helped in achieving my goals.
