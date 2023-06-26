@@ -289,9 +289,38 @@ input[type="range"] {
   }
   
   .scrollbar{
-    width: 400px; /* Set the desired width */
-    height: 500px; /* Set the desired height */
-    overflow: auto; /* Enable scrolling */
+    width: 100%;
+    max-width: 400px;
+    height: 500px; 
+    margin: 0;
+    overflow: auto; 
     overflow-y:scroll;
-    padding:2px;
+    padding:5px;
+    
   }
+  .help-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    text-decoration:none;
+  }
+  ul {
+    list-style-type: none;
+    margin: 10px 0;
+  }
+  li{
+    margin-bottom: 5px;
+  }
+  /* help window title */
+  .help-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bolder;
+    
+  }
+ 
