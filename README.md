@@ -1,17 +1,36 @@
 # Navigation
-- [Introduction](#introduction)
-- [User Stories](#user-stories) 
-- [Design](#Design)
-- [Wireframe](#Wireframe)
-- [Functionality](#Functionality)
-- [Testing](#Testing)
-- [Compatibility](#Compatibility)
-- [Bugs and Issues](#Bugs-and-Issues)
-- [Validation](#Validation)
-- [Usage](#Usage)
-- [Acknowledgments](#Acknowledgments)
-- [Deployment](#Deployment)
-- [Live link for the web app](#Live-link-for-the-web-app)
+- [Navigation](#navigation)
+- [Live link for the web app](#live-link-for-the-web-app)
+  - [Introduction](#introduction)
+  - [Who can use it](#who-can-use-it)
+  - [User Stories](#user-stories)
+  - [Design](#design)
+  - [Wireframe](#wireframe)
+  - [Functionality](#functionality)
+  - [Testing](#testing)
+  - [Automated testing](#automated-testing)
+    - [Lighthouse test](#lighthouse-test)
+      - [Desktop](#desktop)
+      - [Mobile](#mobile)
+    - [Validation test](#validation-test)
+      - [jslint](#jslint)
+      - [JS hint](#js-hint)
+      - [html validator](#html-validator)
+      - [CSS validator (W3C's CSS Validation Service)](#css-validator-w3cs-css-validation-service)
+  - [Testing responsiveness](#testing-responsiveness)
+    - [Manual testing](#manual-testing)
+    - [Google Chrome Developer Tools testing](#google-chrome-developer-tools-testing)
+    - [Responsive Design Testing Tools](#responsive-design-testing-tools)
+    - [Tests with mouse](#tests-with-mouse)
+  - [Tests with touchscreen](#tests-with-touchscreen)
+  - [Compatibility](#compatibility)
+  - [Bugs and Issues](#bugs-and-issues)
+  - [Acknowledgments](#acknowledgments)
+  - [How to deploy](#how-to-deploy)
+  
+# Live link for the web app
+
+https://b-mohammed2.github.io/canvas/
 
 ## Introduction
 This is a simple responsive Drawing website on Canvas built using HTML, CSS, and Javascript. The website allows you to draw any picture or design using a mouse and touch screen. I added a color pallet and line width to change the color and the width of your line as desired. besides doodling, I have added some geometric shape buttons such as ( rectangles, circles, triangles, and straight lines) to help you with your plans. All the shapes react with the color pallet and line width to have various options. Additionally, other buttons such as (clear canvas, undo, and redo) were added to assist the user to fix any mistakes during drawing. Once the user finished the work, it can be saved automatically on the device as a picture.
@@ -242,6 +261,3 @@ I'm grateful for the contributions of these resources, which have significantly 
 I deploy the website according to the steps in this link:
 https://docs.github.com/en/pages/quickstart#
 
-# Live link for the web app
-
-https://b-mohammed2.github.io/canvas/
